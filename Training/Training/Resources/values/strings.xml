@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Training</string>
+    <string name="action_settings">Settings</string>
+  <!--Prac Layout-->
+  <string name="txt_Heading">Registeration Page</string>
+  <string name="edtTxt_Name">Enter your Name</string>
+  <string name="edtTxt_Mobile">Enter your Mobile Number</string>
+  <string name="edtTxt_Email">Enter your Email</string>
+  <string name="edtTxt_Password">Enter the password</string>
+  <string name="Txt_Dob">Select Date Of Birth</string>
+  <string name="radioBtnTxt_Male">Male</string>
+  <string name="radioBtnTxt_Female">Female</string>
+  <string name="radioBtnTxt_Others">Others</string>
+</resources>
