@@ -17,24 +17,24 @@ namespace Training.Activity
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class LoginActivity : AppCompatActivity
     {
-        Button buttonSubmit;
+        Button buttonlogin;
         Android.App.AlertDialog.Builder dialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.LoginLayout);
-            buttonSubmit = FindViewById<Button>(Resource.Id.buttonsubmit);
+             buttonlogin = FindViewById<Button>(Resource.Id.buttonlogin);
             dialog = new Android.App.AlertDialog.Builder(this);
         }
         protected override void OnResume()
         {
             base.OnResume();
-            this.FindViewById<Button>(Resource.Id.buttonsubmit).Click += this.CheckValidation;
+            this.buttonlogin.Click += this.CheckValidation;
         }
         protected override void OnPause()
         {
             base.OnPause();
-            this.FindViewById<Button>(Resource.Id.buttonsubmit).Click -= this.CheckValidation;
+            this.FindViewById<Button>(Resource.Id.buttonlogin).Click -= this.CheckValidation;
         }
         public void CheckValidation(object sender, EventArgs e)
         {
@@ -43,8 +43,8 @@ namespace Training.Activity
             EditText EditText_Password = FindViewById<EditText>(Resource.Id.editText_password);
             userObj.Email = EditText_Email.Text.ToString();
             userObj.Password = EditText_Password.Text.ToString();
-            Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
-            bool isValid = regex.IsMatch(("" + userObj.Email).Trim());
+            var emailvalidate = isValidEmail(userObj.Email);
+
             Android.App.AlertDialog alert = dialog.Create();
 
             if (userObj.Email == "" || userObj.Password == "")
@@ -63,7 +63,7 @@ namespace Training.Activity
                 });
                 alert.Show();
             }
-            else if (!isValid)
+            else if (emailvalidate == false)
             {
                 alert.SetTitle("Alert");
                 alert.SetMessage("Enter Valid Email");
@@ -79,15 +79,18 @@ namespace Training.Activity
                 });
                 alert.Show();
             }
-            else 
+            else
             {
                 alert.SetTitle("Login");
                 alert.SetMessage("Success");
 
                 alert.SetButton("OK", (c, ev) =>
                 {
-                  
-
+                    Intent intent = new Intent(this, typeof(VerificationCodeActivity));
+                    StartActivity(intent);
+                    
+                   intent.PutExtra("email", userObj.Email);
+                    StartActivity(intent);
                 });
                 alert.SetButton2("CANCEL", (c, ev) =>
                 {
@@ -97,5 +100,10 @@ namespace Training.Activity
 
             }
         }
+        public bool isValidEmail(string email)
+        {
+            return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
+        }
+
     }
 }
