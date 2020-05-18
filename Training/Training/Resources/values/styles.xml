@@ -6,6 +6,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="colorBackgroundBlue">@color/colorBackgroundBlue</item>-->
     </style>
+  <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <!--<item name="colorBackgroundBlue">@color/colorBackgroundBlue</item>-->
+  </style>
+  <style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
 
+    <item name="android:windowBackground">@drawable/a67layers</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
 </resources>

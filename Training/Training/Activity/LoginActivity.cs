@@ -10,60 +10,84 @@ using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 using Training.Model;
 
 namespace Training.Activity
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme")]
     public class LoginActivity : AppCompatActivity
     {
-        Button buttonlogin;
+        Button btnLogin;
+        EditText email, password;
+        CheckBox mCbxRemMe;
+      
         Android.App.AlertDialog.Builder dialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            
             SetContentView(Resource.Layout.LoginLayout);
-             buttonlogin = FindViewById<Button>(Resource.Id.buttonlogin);
+            email = FindViewById<EditText>(Resource.Id.editText_email);
+            password = FindViewById<EditText>(Resource.Id.editText_password);
+            btnLogin = FindViewById<Button>(Resource.Id.buttonlogin);
+            mCbxRemMe = FindViewById<CheckBox>(Resource.Id.cbxRememberMe);
             dialog = new Android.App.AlertDialog.Builder(this);
+
+          //  btnLogin.Click += BtnLogin_Click;
         }
         protected override void OnResume()
         {
             base.OnResume();
-            this.buttonlogin.Click += this.CheckValidation;
+            this.btnLogin.Click += this.BtnLogin_Click;
         }
         protected override void OnPause()
         {
             base.OnPause();
-            this.FindViewById<Button>(Resource.Id.buttonlogin).Click -= this.CheckValidation;
+            this.btnLogin.Click -= this.BtnLogin_Click;
         }
-        public void CheckValidation(object sender, EventArgs e)
+
+        private void BtnLogin_Click(object sender, System.EventArgs e)
         {
-            User userObj = new User();
-            EditText EditText_Email = FindViewById<EditText>(Resource.Id.editText_email);
-            EditText EditText_Password = FindViewById<EditText>(Resource.Id.editText_password);
-            userObj.Email = EditText_Email.Text.ToString();
-            userObj.Password = EditText_Password.Text.ToString();
-            var emailvalidate = isValidEmail(userObj.Email);
+            Intent intent = new Intent(this, typeof(DashboardActivity));
 
+            if (CheckValidation(email.Text, password.Text))
+            {
+                User user = new User()
+                {
+                    Email = email.Text,
+                    Password = password.Text
+                };
+
+                intent.PutExtra("User", JsonConvert.SerializeObject(user));
+
+                if (mCbxRemMe.Checked)
+                {
+                    ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                    ISharedPreferencesEditor edit = pref.Edit();
+                    edit.PutString("Email", email.Text.Trim());
+                    edit.PutString("Password", password.Text.Trim());
+                    edit.Apply();
+                }
+                this.StartActivity(intent);
+            }
+        }
+        public bool CheckValidation(string email,string password)
+        {
             Android.App.AlertDialog alert = dialog.Create();
-
-            if (userObj.Email == "" || userObj.Password == "")
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 alert.SetTitle("Alert");
                 alert.SetMessage("Enter All Fields");
-
                 alert.SetButton("OK", (c, ev) =>
                 {
                     Toast.MakeText(this, "Enter All Fields", ToastLength.Long).Show();
 
                 });
-                alert.SetButton2("CANCEL", (c, ev) =>
-                {
-
-                });
                 alert.Show();
+                return false;
             }
-            else if (emailvalidate == false)
+            else if (!Android.Util.Patterns.EmailAddress.Matcher(email).Matches())
             {
                 alert.SetTitle("Alert");
                 alert.SetMessage("Enter Valid Email");
@@ -78,31 +102,28 @@ namespace Training.Activity
 
                 });
                 alert.Show();
+                return false;
             }
             else
             {
-                alert.SetTitle("Login");
-                alert.SetMessage("Success");
+                return true;
+                //alert.SetTitle("Login");
+                //alert.SetMessage("Success");
 
-                alert.SetButton("OK", (c, ev) =>
-                {
-                    Intent intent = new Intent(this, typeof(VerificationCodeActivity));
-                    StartActivity(intent);
+                //alert.SetButton("OK", (c, ev) =>
+                //{
+                //    Intent intent = new Intent(this, typeof(VerificationCodeActivity));
+                //    StartActivity(intent);
                     
-                   intent.PutExtra("email", userObj.Email);
-                    StartActivity(intent);
-                });
-                alert.SetButton2("CANCEL", (c, ev) =>
-                {
+                //   intent.PutExtra("email", userObj.Email);
+                //    StartActivity(intent);
+                //});
+                //alert.SetButton2("CANCEL", (c, ev) =>
+                //{
 
-                });
-                alert.Show();
-
+                //});
+                //alert.Show();
             }
-        }
-        public bool isValidEmail(string email)
-        {
-            return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
         }
 
     }
