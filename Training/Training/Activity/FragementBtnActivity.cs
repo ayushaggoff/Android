@@ -49,21 +49,21 @@ namespace Training.Activity
         }
         protected void btn_Fragment1_Click(object sender, System.EventArgs e)
         {
-            var trans = FragmentManager.BeginTransaction();
-            trans.Replace(Resource.Id.fragmentContainer, new Fragment1(), "fragment1");
-            trans.Commit();
+            //var trans = FragmentManager.BeginTransaction();
+            //trans.Replace(Resource.Id.fragmentContainer, new Fragment1(), "fragment1");
+            //trans.Commit();
         }
         protected void btn_Fragment2_Click(object sender, System.EventArgs e)
         {
-            var trans = FragmentManager.BeginTransaction();
-            trans.Replace(Resource.Id.fragmentContainer, new Fragment2(), "fragment2");
-            trans.Commit();
+        //    var trans = FragmentManager.BeginTransaction();
+        //    trans.Replace(Resource.Id.fragmentContainer, new Fragment2(), "fragment2");
+        //    trans.Commit();
         }
         protected void btn_Fragment3_Click(object sender, System.EventArgs e)
         {
-            var trans = FragmentManager.BeginTransaction();
-            trans.Replace(Resource.Id.fragmentContainer, new Fragment3(), "fragment3");
-            trans.Commit();
+            //var trans = FragmentManager.BeginTransaction();
+            //trans.Replace(Resource.Id.fragmentContainer, new Fragment3(), "fragment3");
+            //trans.Commit();
         }protected void btn_Fragment4_Click(object sender, System.EventArgs e)
         {
             var trans = FragmentManager.BeginTransaction();

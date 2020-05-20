@@ -22,6 +22,7 @@ namespace Training.Activity
         string Email;
         Button btnAddProfile;
         Button btnFragment;
+        Button btnTab;
         TextView TextView_Name;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -34,6 +35,7 @@ namespace Training.Activity
             //EditText_Email = FindViewById<TextView>(Resource.Id.textView_Email);
             btnAddProfile = FindViewById<Button>(Resource.Id.button1);
             btnFragment = FindViewById<Button>(Resource.Id.button2);
+            btnTab = FindViewById<Button>(Resource.Id.button3);
           //  EditText_Email.Text = email;
         }
         protected override void OnResume()
@@ -44,6 +46,7 @@ namespace Training.Activity
                      StartActivityForResult(typeof(AddProfileActivity), ResultCode);
                  };
             this.btnFragment.Click += this.BtnFragment_Click;
+            this.btnTab.Click += this.BtnTab_Click;
         }
         protected override void OnPause()
         {
@@ -60,13 +63,17 @@ namespace Training.Activity
         {
             //Intent intent = new Intent(this, typeof(AddProfileActivity));
             //StartActivity(intent);
-         //   Intent intent = new Intent(this, typeof(AddProfileActivity));
-           StartActivityForResult(typeof(AddProfileActivity), ResultCode);
+            //   Intent intent = new Intent(this, typeof(AddProfileActivity));
+            StartActivityForResult(typeof(AddProfileActivity), ResultCode);
             //StartActivityForResult(typeof(AddProfileActivity), 2);
         }
 
-     
-       
+        private void BtnTab_Click(object sender, System.EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(TabActivity));
+            StartActivity(intent);
+        }
+
         protected override void OnActivityResult(int requestCode, [GeneratedEnum]  Result resultCode, Intent data)
         {
             TextView_Name = FindViewById<TextView>(Resource.Id.textview_name);
