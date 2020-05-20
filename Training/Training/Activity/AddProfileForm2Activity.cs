@@ -31,17 +31,19 @@ namespace Training.Activity
         {
             base.OnResume();
             this.btnSubmit.Click += this.BtnAddProfile_Click;
+            this.btnCancel.Click += this.BtnAddProfile_Click;
         }
         protected override void OnPause()
         {
             base.OnPause();
             this.btnSubmit.Click -= this.BtnAddProfile_Click;
+            this.btnCancel.Click += this.BtnAddProfile_Click;
         }
 
         private void BtnAddProfile_Click(object sender, System.EventArgs e)
         {
             Intent intent = new Intent(this, typeof(DashboardActivity));
-          intent.AddFlags(ActivityFlags.ClearTop);
+             intent.AddFlags(ActivityFlags.ClearTop);
             StartActivity(intent);
         }
     }

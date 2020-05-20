@@ -18,13 +18,14 @@ namespace Training.Activity
     {
         string firstName;
         string lastName;
+        EditText edittext_Fname;
         Button btnNext;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.AddProfileFormLayout);
-
-            btnNext = FindViewById<Button>(Resource.Id.button1);
+            SetContentView(Resource.Layout.AddPersonalDetailFormLayout);
+            edittext_Fname = FindViewById<EditText>(Resource.Id.editTextFirstName);
+            btnNext = FindViewById<Button>(Resource.Id.button2);
             
         }
         protected override void OnResume()
@@ -40,9 +41,25 @@ namespace Training.Activity
 
         private void BtnAddProfile_Click(object sender, System.EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(AddProfileForm1Activity));
-            StartActivity(intent);
-        }
+            //    Intent intent = new Intent(this, typeof(AddProfileForm1Activity));
+            //    StartActivity(intent);
+            String message = edittext_Fname.Text;
 
+            Intent intent1 = new Intent();
+            intent1.SetData(Android.Net.Uri.Parse(edittext_Fname.Text));
+            SetResult(Result.Ok, intent1);
+            this.Finish();
+
+          //  Intent intent = new Intent();
+           // intent.PutExtra("MESSAGE", message);
+            //intent.SetData(Android.Net.Uri.Parse(message));
+                                //SetResult(2,intent);  
+
+          //  SetResult(Result.Ok, intent);
+          //  StartActivityForResult(intent, 2);
+        
+       //Finish();//finishing activity  
+        }
     }
+
 }

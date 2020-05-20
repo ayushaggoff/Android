@@ -70,6 +70,7 @@ namespace Training.Activity
                     edit.Apply();
                 }
                 this.StartActivity(intent);
+                this.Finish();
             }
         }
         public bool CheckValidation(string email,string password)

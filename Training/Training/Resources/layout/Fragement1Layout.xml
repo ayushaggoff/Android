@@ -2,24 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/darker_gray">
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-       
-    android:id="@+id/textView_Email"/>
-    <Button android:text="Fragments" 
+        android:id="@+id/editText1"/>
+        <TextView
+        android:text="Fragment1"
+       android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2" />
-        <Button android:text="Add Profile Detail" 
+        android:layout_centerInParent="true"
+    android:id="@+id/text"/>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
-<TextView
-       android:text="FDFDFD"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-        android:id="@+id/textview_name"/>
+        android:text="enter"
+        android:id="@+id/btnAyush"/>
 </LinearLayout>
