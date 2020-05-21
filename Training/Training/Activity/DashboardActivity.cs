@@ -56,7 +56,8 @@ namespace Training.Activity
 
         private void BtnFragment_Click(object sender, System.EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(FragementBtnActivity));
+            //Intent intent = new Intent(this, typeof(FragementBtnActivity));
+            Intent intent = new Intent(this, typeof(LogListActivity));
             StartActivity(intent);
         }
         private void BtnAddProfile_Click(object sender, System.EventArgs e)
