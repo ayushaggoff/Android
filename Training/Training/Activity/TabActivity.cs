@@ -48,12 +48,15 @@ namespace Training.Activity
             tabLayout.SetupWithViewPager(viewPager);
             // ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(SupportFragmentManager);
 
-
+         //   TextView tabOne = (TextView)LayoutInflater.From(this).Inflate(Resource.Layout.custom_tab, null);
+         ////   tabOne.SetText();
+         //   tabOne.SetCompoundDrawablesWithIntrinsicBounds(0, Resource.Drawable.iconHome, 0, 0);
+         //   tabLayout.GetTabAt(0).SetCustomView(tabOne);
 
             if (viewPager.Adapter == null)
             {
                 setupViewPager(viewPager);
-
+                
 
             }
             else
@@ -62,10 +65,12 @@ namespace Training.Activity
             }
 
             tabLayout.SetupWithViewPager(viewPager);
+            createTabIcons();
         }
+
         void setupViewPager(Android.Support.V4.View.ViewPager viewPager)
         {
-            var adapter = new Adapter(SupportFragmentManager);
+            var adapter = new PageAdapter(SupportFragmentManager);
             adapter.AddFragment(new Fragment1(), "First Fragment");
             adapter.AddFragment(new Fragment2(), "Second Fragment");
             adapter.AddFragment(new Fragment3(), "Third Fragment");
@@ -76,39 +81,28 @@ namespace Training.Activity
 
         }
 
+        private void createTabIcons()
+        {
+
+            TextView tabOne = (TextView)LayoutInflater.From(this).Inflate(Resource.Layout.custom_tab, null);
+         
+            tabOne.Text = "Tab 1";
+            tabOne.SetCompoundDrawablesWithIntrinsicBounds(0, Resource.Drawable.iconHome, 0, 0);
+            tabLayout.GetTabAt(0).SetCustomView(tabOne);
+
+            TextView tabTwo = (TextView)LayoutInflater.From(this).Inflate(Resource.Layout.custom_tab, null);
+            tabTwo.Text = "Tab 2";
+            tabTwo.SetCompoundDrawablesWithIntrinsicBounds(0, Resource.Drawable.iconPlanner, 0, 0);
+            tabLayout.GetTabAt(1).SetCustomView(tabTwo);
+
+            TextView tabThree = (TextView)LayoutInflater.From(this).Inflate(Resource.Layout.custom_tab, null);
+            //tabThree.setText("Tab 3");
+            tabThree.Text = "Tab 3";
+            tabThree.SetCompoundDrawablesWithIntrinsicBounds(0, Resource.Drawable.iconsUserMenu, 0, 0);
+            tabLayout.GetTabAt(2).SetCustomView(tabThree);
+        }
+
     }
-    class Adapter : Android.Support.V4.App.FragmentPagerAdapter
-    {
-        List<V4Fragment> fragments = new List<V4Fragment>();
-        List<string> fragmentTitles = new List<string>();
-        public Adapter(Android.Support.V4.App.FragmentManager fm) : base(fm)
-        {
-        }
-
-        public void AddFragment(V4Fragment fragment, string title)
-        {
-            fragments.Add(fragment);
-            fragmentTitles.Add(title);
-        }
-
-        public override int Count
-        {
-            get
-            {
-                return fragments.Count;
-            }
-        }
-
-        public override Android.Support.V4.App.Fragment GetItem(int position)
-        {
-            return fragments[position];
-        }
-
-
-        public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
-        {
-            return new Java.Lang.String(fragmentTitles[position]);
-        }
-    }
+   
 }
 
