@@ -27,6 +27,7 @@ namespace Training.Activity
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
             string email = pref.GetString("Email", String.Empty);
@@ -37,6 +38,12 @@ namespace Training.Activity
             btnFragment = FindViewById<Button>(Resource.Id.button2);
             btnTab = FindViewById<Button>(Resource.Id.button3);
           //  EditText_Email.Text = email;
+        }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
         protected override void OnResume()
         {

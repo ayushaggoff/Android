@@ -3,6 +3,6 @@
   <PropertyGroup>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <SelectedDevice>Pixel_2_API_29</SelectedDevice>
+    <SelectedDevice>Pixel_3_XL_API_29_6.3</SelectedDevice>
   </PropertyGroup>
 </Project>

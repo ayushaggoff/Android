@@ -15,7 +15,7 @@ using Training.Model;
 
 namespace Training.Activity
 {
-    [Activity(Label = "SplashScreenActivity", MainLauncher=true, Theme="@style/Theme.Splash", NoHistory=true)]
+    [Activity(Label = "SplashScreenActivity", Theme="@style/Theme.Splash", NoHistory=true)]
     public class SplashScreenActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

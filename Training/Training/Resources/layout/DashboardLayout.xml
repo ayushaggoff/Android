@@ -17,6 +17,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button1" />
+    <Button android:text="TabLayout" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3" />
+     
 <TextView
        android:text="FDFDFD"
     android:layout_width="wrap_content"

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"  
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Toolbar
@@ -12,30 +12,35 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <ImageButton
-            android:src="@drawable/iconHome"
-            android:layout_width="46dp"
-            android:layout_height="46dp"
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:src="@drawable/iconHome"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@color/mtrl_btn_transparent_bg_color"
                 android:layout_alignParentLeft="true"/>
-        <TextView
-            android:text="Log"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:text="Log"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="@android:color/black"
                 android:layout_centerInParent="true"/>
             <ImageButton
-            android:src="@drawable/iconPlanner"
-            android:layout_width="@dimen/abc_action_button_min_width_material"
-            android:layout_height="@dimen/abc_action_button_min_height_material"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/iconplanner"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="@dimen/abc_action_button_min_height_material"
+                android:background="@color/mtrl_btn_transparent_bg_color"
                 android:layout_alignParentRight="true"/>
-       </RelativeLayout>
-        </Toolbar>
+        </RelativeLayout>
+    </Toolbar>
     <ListView
         android:layout_width="match_parent"
-         android:layout_height="wrap_content"  
-        android:fastScrollEnabled="true" 
+        android:layout_height="wrap_content"
+        android:fastScrollEnabled="true"
+       
         android:id="@id/line1"/>
 </LinearLayout>   
