@@ -20,6 +20,7 @@ namespace Training.Activity
     {
         ListView myList;
         Android.Support.V7.Widget.AppCompatImageButton btnHome;
+        Android.Support.V7.Widget.AppCompatImageButton btnContact;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,6 +29,7 @@ namespace Training.Activity
 
             myList = FindViewById<ListView>(Resource.Id.line1);
             btnHome = FindViewById<Android.Support.V7.Widget.AppCompatImageButton>(Resource.Id.imageButton1);
+            btnContact = FindViewById<Android.Support.V7.Widget.AppCompatImageButton>(Resource.Id.imageButton2);
             myList.Adapter = new CustomLogListAdapter(LogListData.Log);
             myList.ItemClick += MyList_ItemClick;
         }
@@ -42,12 +44,18 @@ namespace Training.Activity
         {
             base.OnResume();
             btnHome.Click += this.BtnHome_Click;
+            btnContact.Click += this.BtnContact_Click;
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(DashboardActivity));
                StartActivity(intent);
+        }
+        private void BtnContact_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(ContactListActivity));
+            StartActivity(intent);
         }
     }
 }

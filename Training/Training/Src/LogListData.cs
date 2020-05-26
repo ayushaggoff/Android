@@ -22,8 +22,7 @@ namespace Training.Src
             var temp = new List<LogList>();
 
             AddLog(temp);
-            AddLog(temp);
-            AddLog(temp);
+           
 
             Log = temp.OrderBy(i => i.Name).ToList();
         }
@@ -43,7 +42,7 @@ namespace Training.Src
                 Name = "Will Smith",
                 Date = "19 July 2019",
                 Time = "02",
-                Status = "Status changed from Not Started to in progress"
+                Status = "Status changed from in progress to Completed "
             });
 
             logObj.Add(new LogList()
@@ -59,7 +58,7 @@ namespace Training.Src
                 Name = "Will Smith",
                 Date = "19 July 2019",
                 Time = "02",
-                Status = "Status changed from Not Started to in progress"
+                Status = "Status changed from on Hold to in progress"
             });
 
             logObj.Add(new LogList()

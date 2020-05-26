@@ -77,12 +77,39 @@ namespace Training.Adapter
             holder.Date.Text= log[position].Date;
             holder.Status.Text= log[position].Status;
             holder.Time.Text= log[position].Time;
-
+            
             SpannableString ss = new SpannableString(holder.Status.Text);
             ForegroundColorSpan fcRed = new ForegroundColorSpan(Color.Red);
             ForegroundColorSpan fcBlue = new ForegroundColorSpan(Color.Blue);
-            ss.SetSpan(fcRed, 19, 31, SpanTypes.ExclusiveExclusive);
-            ss.SetSpan(fcBlue, 35, 46, SpanTypes.ExclusiveExclusive);
+            ForegroundColorSpan fcOrange = new ForegroundColorSpan(Color.DarkOrange);
+            ForegroundColorSpan fcGreen = new ForegroundColorSpan(Color.Green);
+            var tempStatus = holder.Status.Text.ToLower();
+
+            if (tempStatus.Contains("started"))
+            {
+               int start = tempStatus.IndexOf("not started");
+               int  end = tempStatus.IndexOf("not started") + 11;
+            ss.SetSpan(fcRed, start, end, SpanTypes.ExclusiveExclusive);
+            }
+            if (tempStatus.Contains("progress"))
+            {
+                int start = tempStatus.IndexOf("in progress");
+                int end = tempStatus.IndexOf("in progress") + 11;
+                ss.SetSpan(fcBlue, start, end, SpanTypes.ExclusiveExclusive);
+            }
+            if (tempStatus.Contains("hold"))
+            {
+                int start = tempStatus.IndexOf("on hold");
+                int end = tempStatus.IndexOf("on hold") +7;
+                ss.SetSpan(fcOrange, start, end, SpanTypes.ExclusiveExclusive);
+            }
+            if (tempStatus.Contains("completed"))
+            {
+                int start = tempStatus.IndexOf("completed");
+                int end = tempStatus.IndexOf("completed") + 9;
+                ss.SetSpan(fcGreen, start, end, SpanTypes.ExclusiveExclusive);
+            }
+            //  ss.SetSpan(fcBlue, 35, 46, SpanTypes.ExclusiveExclusive);
             holder.Status.TextFormatted = ss;
             return view;
         }
