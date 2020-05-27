@@ -30,21 +30,27 @@ namespace Training.Activity
         void Try()
         {
 
-            var uri = ContactsContract.Contacts.ContentUri;
+
+
+            var uri = ContactsContract.CommonDataKinds.Phone.ContentUri;
             string[] projection = {
             ContactsContract.Contacts.InterfaceConsts.Id,
-            ContactsContract.Contacts.InterfaceConsts.DisplayName
+             ContactsContract.CommonDataKinds.Phone.Number,
+             ContactsContract.CommonDataKinds.Phone.InterfaceConsts.DisplayName
+
+            //ContactsContract.Contacts.InterfaceConsts.DisplayName
         };
-            var cursor = ManagedQuery(uri, projection, null, null, null);
+             var cursor = ManagedQuery(uri, projection, null, null, null);
             var contactList = new List<string>();
             if (cursor.MoveToFirst())
             {
                 do
                 {
                     contactList.Add(cursor.GetString(cursor.GetColumnIndex(projection[1])));
+                     contactList.Add(cursor.GetString(cursor.GetColumnIndex(projection[2])));
                 } while (cursor.MoveToNext());
             }
-            ListAdapter = new ArrayAdapter<string>(this, Resource.Layout.ContactListLayout, contactList);
+            ListAdapter = new ArrayAdapter<string>(this, Resource.Layout.ContactListLayout,Resource.Id.textView1, contactList);
         }
 
 
@@ -63,7 +69,7 @@ namespace Training.Activity
         readonly string[] PermissionGroupLocation =
        {
             Manifest.Permission.ReadContacts,
-            //Manifest.Permission.AccessFineLocation
+            Manifest.Permission.AccessFineLocation
         };
 
         async Task GetPermission()

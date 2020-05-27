@@ -11,4 +11,9 @@
   <string name="radioBtnTxt_Male">Male</string>
   <string name="radioBtnTxt_Female">Female</string>
   <string name="radioBtnTxt_Others">Others</string>
+
+
+  <string name="menuItem1">Gallery</string>
+  <string name="menuItem2">Camera</string>
+  <string name="menuItem3">Item 3</string>
 </resources>
