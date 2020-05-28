@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Android;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -12,22 +14,57 @@ using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
 using Training.Model;
+using Xamarin.Facebook;
+using Xamarin.Facebook.Login;
 
 namespace Training.Activity
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme")]
-    public class LoginActivity : AppCompatActivity
+    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = true)]
+    public class LoginActivity : AppCompatActivity, IFacebookCallback
     {
+        ICallbackManager mCallBackManager;
+        MyProfileTracker mProfileTracker;
+        ImageButton btn_fb;
+        string Name;
         Button btnLogin;
         EditText email, password;
         CheckBox mCbxRemMe;
       
         Android.App.AlertDialog.Builder dialog;
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            
+            await TryToGetPermission();
+            FacebookSdk.SdkInitialize(this.ApplicationContext);
+
+
             SetContentView(Resource.Layout.LoginLayout);
+
+            mProfileTracker = new MyProfileTracker();
+            mProfileTracker.mOnProfileChanged += MProfileTracker_mOnProfileChanged;
+            mProfileTracker.StartTracking();
+
+
+            btn_fb = FindViewById<ImageButton>(Resource.Id.imageButton1);
+            mCallBackManager = CallbackManagerFactory.Create();
+
+
+            LoginManager.Instance.RegisterCallback(mCallBackManager, this);
+            btn_fb.Click += (o, e) =>
+            {
+
+                if (AccessToken.CurrentAccessToken != null)
+                {
+                    LoginManager.Instance.LogOut();
+
+                }
+                else
+                {
+                    LoginManager.Instance.LogInWithReadPermissions(this, new List<string> { "public_profile", "user_friends" });
+                }        
+            };
+
+
             email = FindViewById<EditText>(Resource.Id.editText_email);
             password = FindViewById<EditText>(Resource.Id.editText_password);
             btnLogin = FindViewById<Button>(Resource.Id.buttonlogin);
@@ -36,6 +73,23 @@ namespace Training.Activity
 
           //  btnLogin.Click += BtnLogin_Click;
         }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            mCallBackManager.OnActivityResult(requestCode, (int)resultCode, data);
+        }
+
+
+        private void MProfileTracker_mOnProfileChanged(object sender, OnProfrofileChangedArgs e)
+        {
+            if (e.mProfile!=null)
+            {
+
+            Name =""+ e.mProfile.FirstName+""+e.mProfile.LastName;
+            }
+        }
+
         protected override void OnResume()
         {
             base.OnResume();
@@ -127,5 +181,127 @@ namespace Training.Activity
             }
         }
 
+
+
+
+        #region permisson
+        async Task TryToGetPermission()
+        {
+            if ((int)Build.VERSION.SdkInt >= 23)
+            {
+                await GetPermission();
+                return;
+            }
+        }
+
+        const int RequestLocationId = 0;
+
+        readonly string[] PermissionGroupLocation =
+       {
+            Manifest.Permission.AccessCoarseLocation,
+            Manifest.Permission.AccessFineLocation
+        };
+
+        async Task GetPermission()
+        {
+            string permission = Manifest.Permission.AccessFineLocation;
+
+            if (CheckSelfPermission(permission) == (int)Android.Content.PM.Permission.Granted)
+            {
+                Toast.MakeText(this, "Loaction Permission Granted", ToastLength.Short).Show();
+                return;
+            }
+
+            if (ShouldShowRequestPermissionRationale(permission))
+            {
+                Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
+                alert.SetTitle("Permissions Needed");
+                alert.SetMessage("The application need special permissions to continue");
+                alert.SetPositiveButton("Request Permissions", (senderAlert, args) =>
+                {
+                    RequestPermissions(PermissionGroupLocation, RequestLocationId);
+                });
+
+                alert.SetNegativeButton("Cancel", (senderAlert, args) =>
+                {
+                    Toast.MakeText(this, "Cancelled!", ToastLength.Short).Show();
+                });
+
+                Dialog dialog = alert.Create();
+                dialog.Show();
+
+
+                return;
+            }
+
+            RequestPermissions(PermissionGroupLocation, RequestLocationId);
+        }
+
+        public override async void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            switch (requestCode)
+            {
+                case RequestLocationId:
+                    {
+                        if (grantResults[0] == (int)Android.Content.PM.Permission.Granted)
+                        {
+                            Toast.MakeText(this, "Special permissions granted", ToastLength.Short).Show();
+
+                        }
+                        else
+                        {
+
+                            Toast.MakeText(this, "Special permissions denied", ToastLength.Short).Show();
+
+                        }
+                    }
+                    break;
+            }
+
+        }
+
+        public void OnCancel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnError(FacebookException error)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnSuccess(Java.Lang.Object result)
+        {
+            Intent intent = new Intent(this, typeof(DashboardActivity));
+            intent.PutExtra("Name",Name );
+            this.StartActivity(intent);
+        }
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
+
+        #endregion
+    }
+    public class MyProfileTracker : ProfileTracker
+    {
+        public event EventHandler<OnProfrofileChangedArgs> mOnProfileChanged;
+
+        protected override void OnCurrentProfileChanged(Profile oldProfile, Profile currentProfile)
+        {
+            if (mOnProfileChanged != null)
+            {
+
+                mOnProfileChanged.Invoke(this, new OnProfrofileChangedArgs(currentProfile));
+            }
+        }
+    }
+    public class OnProfrofileChangedArgs : EventArgs
+    {
+        public Profile mProfile;
+        public OnProfrofileChangedArgs(Profile profile)
+        {
+            mProfile = profile;
+        }
     }
 }

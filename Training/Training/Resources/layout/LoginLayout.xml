@@ -102,7 +102,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center">
-            <ImageView
+            
+            <ImageButton
+                android:id="@+id/imageButton1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="#20318B"

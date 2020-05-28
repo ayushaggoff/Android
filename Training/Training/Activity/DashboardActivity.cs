@@ -30,9 +30,16 @@ namespace Training.Activity
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+            
             string email = pref.GetString("Email", String.Empty);
             string password = pref.GetString("Password", String.Empty);
             SetContentView(Resource.Layout.DashboardLayout);
+            string datafromlogin = Intent.GetStringExtra("Name");
+            TextView_Name = FindViewById<TextView>(Resource.Id.textview_name);
+      
+
+            TextView_Name.Text = datafromlogin;
+      
             //EditText_Email = FindViewById<TextView>(Resource.Id.textView_Email);
             btnAddProfile = FindViewById<Button>(Resource.Id.button1);
             btnFragment = FindViewById<Button>(Resource.Id.button2);
