@@ -3,12 +3,27 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+   <LinearLayout
+        android:orientation="horizontal"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center_vertical">
     <TextView
+        android:text="Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-       
+        android:layout_gravity="center_vertical"
     android:id="@+id/textView_Email"/>
+    <Button
+                android:text="Log out"
+            android:textColor="@android:color/holo_blue_dark"
+            android:background="@android:color/transparent"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right" 
+       android:id="@+id/button4" />
+        </LinearLayout>
     <Button android:text="Fragments" 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

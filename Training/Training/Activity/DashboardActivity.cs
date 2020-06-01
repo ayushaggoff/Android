@@ -11,6 +11,8 @@ using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Xamarin.Facebook.AppLinks;
+using Xamarin.Facebook.Login;
 
 namespace Training.Activity
 {
@@ -21,9 +23,9 @@ namespace Training.Activity
 
         string Email;
         Button btnAddProfile;
-        Button btnFragment;
+        Button btnFragment,btnLogout;
         Button btnTab;
-        TextView TextView_Name;
+        TextView TextView_Name, TextView_Email;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -36,15 +38,16 @@ namespace Training.Activity
             SetContentView(Resource.Layout.DashboardLayout);
             string datafromlogin = Intent.GetStringExtra("Name");
             TextView_Name = FindViewById<TextView>(Resource.Id.textview_name);
+            btnLogout = FindViewById<Button>(Resource.Id.button4);
       
 
             TextView_Name.Text = datafromlogin;
       
-            //EditText_Email = FindViewById<TextView>(Resource.Id.textView_Email);
+            TextView_Email = FindViewById<TextView>(Resource.Id.textView_Email);
             btnAddProfile = FindViewById<Button>(Resource.Id.button1);
             btnFragment = FindViewById<Button>(Resource.Id.button2);
             btnTab = FindViewById<Button>(Resource.Id.button3);
-          //  EditText_Email.Text = email;
+            TextView_Email.Text = datafromlogin;
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -59,8 +62,23 @@ namespace Training.Activity
                  {
                      StartActivityForResult(typeof(AddProfileActivity), ResultCode);
                  };
+
+            this.btnLogout.Click += (obj, e) =>
+            {
+                LoginManager.Instance.LogOut();
+               
+            
+            Intent intent = new Intent(this,typeof(LoginActivity));
+                  
+            StartActivity(intent);
+             Finish();
+    };
+
+
             this.btnFragment.Click += this.BtnFragment_Click;
             this.btnTab.Click += this.BtnTab_Click;
+
+
         }
         protected override void OnPause()
         {

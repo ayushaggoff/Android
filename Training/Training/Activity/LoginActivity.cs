@@ -13,6 +13,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using Org.Json;
 using Training.Model;
 using Xamarin.Facebook;
 using Xamarin.Facebook.Login;
@@ -20,7 +21,7 @@ using Xamarin.Facebook.Login;
 namespace Training.Activity
 {
     [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = true)]
-    public class LoginActivity : AppCompatActivity, IFacebookCallback
+    public class LoginActivity : AppCompatActivity, IFacebookCallback,GraphRequest.IGraphJSONObjectCallback
     {
         ICallbackManager mCallBackManager;
         MyProfileTracker mProfileTracker;
@@ -29,7 +30,7 @@ namespace Training.Activity
         Button btnLogin;
         EditText email, password;
         CheckBox mCbxRemMe;
-      
+
         Android.App.AlertDialog.Builder dialog;
         protected async override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,9 +41,7 @@ namespace Training.Activity
 
             SetContentView(Resource.Layout.LoginLayout);
 
-            mProfileTracker = new MyProfileTracker();
-            mProfileTracker.mOnProfileChanged += MProfileTracker_mOnProfileChanged;
-            mProfileTracker.StartTracking();
+           
 
 
             btn_fb = FindViewById<ImageButton>(Resource.Id.imageButton1);
@@ -53,15 +52,8 @@ namespace Training.Activity
             btn_fb.Click += (o, e) =>
             {
 
-                if (AccessToken.CurrentAccessToken != null)
-                {
-                    LoginManager.Instance.LogOut();
+                LoginManager.Instance.LogInWithReadPermissions(this, new List<string> { "public_profile", "user_friends","email" });
 
-                }
-                else
-                {
-                    LoginManager.Instance.LogInWithReadPermissions(this, new List<string> { "public_profile", "user_friends" });
-                }        
             };
 
 
@@ -71,26 +63,10 @@ namespace Training.Activity
             mCbxRemMe = FindViewById<CheckBox>(Resource.Id.cbxRememberMe);
             dialog = new Android.App.AlertDialog.Builder(this);
 
-          //  btnLogin.Click += BtnLogin_Click;
+            //  btnLogin.Click += BtnLogin_Click;
         }
 
-        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
-        {
-            base.OnActivityResult(requestCode, resultCode, data);
-            mCallBackManager.OnActivityResult(requestCode, (int)resultCode, data);
-        }
-
-
-        private void MProfileTracker_mOnProfileChanged(object sender, OnProfrofileChangedArgs e)
-        {
-            if (e.mProfile!=null)
-            {
-
-            Name =""+ e.mProfile.FirstName+""+e.mProfile.LastName;
-            }
-        }
-
-        protected override void OnResume()
+         protected override void OnResume()
         {
             base.OnResume();
             this.btnLogin.Click += this.BtnLogin_Click;
@@ -127,7 +103,7 @@ namespace Training.Activity
                 this.Finish();
             }
         }
-        public bool CheckValidation(string email,string password)
+        public bool CheckValidation(string email, string password)
         {
             Android.App.AlertDialog alert = dialog.Create();
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
@@ -169,7 +145,7 @@ namespace Training.Activity
                 //{
                 //    Intent intent = new Intent(this, typeof(VerificationCodeActivity));
                 //    StartActivity(intent);
-                    
+
                 //   intent.PutExtra("email", userObj.Email);
                 //    StartActivity(intent);
                 //});
@@ -181,6 +157,51 @@ namespace Training.Activity
             }
         }
 
+
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            mCallBackManager.OnActivityResult(requestCode, (int)resultCode, data);
+        }
+
+        public void OnCancel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnError(FacebookException error)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnSuccess(Java.Lang.Object result)
+        {
+            GraphRequest request = GraphRequest.NewMeRequest(AccessToken.CurrentAccessToken, this);
+            Bundle parameters = new Bundle();
+            parameters.PutString("fields", "id,name,age_range,email");
+            request.Parameters = parameters;
+            request.ExecuteAsync();
+
+           
+        }
+        public void OnCompleted(JSONObject json, GraphResponse response)
+        {
+            string data = json.ToString();
+            FacebookResult result = JsonConvert.DeserializeObject<FacebookResult>(data);
+            Console.WriteLine(json.ToString());
+            Name = result.email;
+
+            Intent intent = new Intent(this, typeof(DashboardActivity));
+            intent.PutExtra("Name", Name);
+
+
+            this.StartActivity(intent);
+        }
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
 
 
 
@@ -260,48 +281,6 @@ namespace Training.Activity
 
         }
 
-        public void OnCancel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnError(FacebookException error)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnSuccess(Java.Lang.Object result)
-        {
-            Intent intent = new Intent(this, typeof(DashboardActivity));
-            intent.PutExtra("Name",Name );
-            this.StartActivity(intent);
-        }
-        protected override void OnDestroy()
-        {
-            base.OnDestroy();
-        }
-
         #endregion
-    }
-    public class MyProfileTracker : ProfileTracker
-    {
-        public event EventHandler<OnProfrofileChangedArgs> mOnProfileChanged;
-
-        protected override void OnCurrentProfileChanged(Profile oldProfile, Profile currentProfile)
-        {
-            if (mOnProfileChanged != null)
-            {
-
-                mOnProfileChanged.Invoke(this, new OnProfrofileChangedArgs(currentProfile));
-            }
-        }
-    }
-    public class OnProfrofileChangedArgs : EventArgs
-    {
-        public Profile mProfile;
-        public OnProfrofileChangedArgs(Profile profile)
-        {
-            mProfile = profile;
-        }
     }
 }
