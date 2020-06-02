@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
+      "Bolts/1.4.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid403/Bolts.AppLinks.dll": {},
+          "lib/MonoAndroid403/Bolts.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid403/Bolts.AppLinks.dll": {},
+          "lib/MonoAndroid403/Bolts.Tasks.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -780,10 +791,177 @@
         "runtime": {
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
+      },
+      "Xamarin.Facebook.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.AppLinks.Android": "5.11.2",
+          "Xamarin.Facebook.Common.Android": "5.11.2",
+          "Xamarin.Facebook.Core.Android": "5.11.2",
+          "Xamarin.Facebook.Login.Android": "5.11.2",
+          "Xamarin.Facebook.Messenger.Android": "5.11.2",
+          "Xamarin.Facebook.Places.Android": "5.11.2",
+          "Xamarin.Facebook.Share.Android": "5.11.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.Android.dll": {}
+        }
+      },
+      "Xamarin.Facebook.AppLinks.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Bolts": "1.4.0.1",
+          "Xamarin.Android.Support.Annotations": "28.0.0.3",
+          "Xamarin.Android.Support.Core.Utils": "28.0.0.3",
+          "Xamarin.Facebook.Core.Android": "5.11.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.AppLinks.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.AppLinks.Android.dll": {}
+        }
+      },
+      "Xamarin.Facebook.Common.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.CustomTabs": "28.0.0.3",
+          "Xamarin.Android.Support.v4": "28.0.0.3",
+          "Xamarin.Android.Support.v7.AppCompat": "28.0.0.3",
+          "Xamarin.Android.Support.v7.CardView": "28.0.0.3",
+          "Xamarin.Facebook.Core.Android": "5.11.2",
+          "Xamarin.Google.ZXing.Core": "3.3.3"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.Common.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.Common.Android.dll": {}
+        }
+      },
+      "Xamarin.Facebook.Core.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Bolts": "1.4.0.1",
+          "Xamarin.Android.Support.Annotations": "28.0.0.3",
+          "Xamarin.Android.Support.Core.Utils": "28.0.0.3"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.Core.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.Core.Android.dll": {}
+        }
+      },
+      "Xamarin.Facebook.Login.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v7.AppCompat": "28.0.0.3",
+          "Xamarin.Facebook.Common.Android": "5.11.2",
+          "Xamarin.Facebook.Core.Android": "5.11.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.Login.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.Login.Android.dll": {}
+        }
+      },
+      "Xamarin.Facebook.Messenger.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Bolts": "1.4.0.1",
+          "Xamarin.Facebook.Core.Android": "5.11.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.Messenger.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.Messenger.Android.dll": {}
+        }
+      },
+      "Xamarin.Facebook.Places.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.Core.Android": "5.11.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.Places.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.Places.Android.dll": {}
+        }
+      },
+      "Xamarin.Facebook.Share.Android/5.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v7.AppCompat": "28.0.0.3",
+          "Xamarin.Facebook.Common.Android": "5.11.2",
+          "Xamarin.Facebook.Core.Android": "5.11.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Facebook.Share.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Facebook.Share.Android.dll": {}
+        }
+      },
+      "Xamarin.Google.ZXing.Core/3.3.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android"
+        ],
+        "compile": {
+          "lib/monoandroid90/Google.ZXing.Core.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Google.ZXing.Core.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Bolts/1.4.0.1": {
+      "sha512": "jP+DKZRTd/3+S7eN25bHhYrl+f5xh/gHtx9D6Z947bADQyPWrOY2FWtY7qrIlHNOwUaFFsljN1M4irI9sBpz1Q==",
+      "type": "package",
+      "path": "bolts/1.4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bolts.1.4.0.1.nupkg.sha512",
+        "bolts.nuspec",
+        "lib/MonoAndroid403/Bolts.AppLinks.dll",
+        "lib/MonoAndroid403/Bolts.Tasks.dll"
+      ]
+    },
     "Newtonsoft.Json/12.0.3": {
       "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
@@ -1667,6 +1845,124 @@
         "xamarin.essentials.1.3.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
+    },
+    "Xamarin.Facebook.Android/5.11.2": {
+      "sha512": "ZCzxIKlWcDq14znmYUBNvkgfLIXKw9E9JaHcCoOwd5wtQe8VGtO0TtD9roJ0xNVXMQ92Na4nfE0guUL5ZHEOlw==",
+      "type": "package",
+      "path": "xamarin.facebook.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.Android.dll",
+        "xamarin.facebook.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.android.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.AppLinks.Android/5.11.2": {
+      "sha512": "uS4y3OHoKQBLaF9fpfueOvnM//teTpYU7WEKCbyfHZtM1oJvtG1IpDSemUqkTwCXalPNHuEUg7K6guLfH2MKIg==",
+      "type": "package",
+      "path": "xamarin.facebook.applinks.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.AppLinks.Android.dll",
+        "xamarin.facebook.applinks.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.applinks.android.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.Common.Android/5.11.2": {
+      "sha512": "a0zxT37tI5eTDGSGAPnDA0LkmAnnrjpKBvBM7pW4PSJxwRKQpFe+bnVNKuWi9Kp14ZyMwlMDQb1VWpb2KSDGuA==",
+      "type": "package",
+      "path": "xamarin.facebook.common.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.Common.Android.dll",
+        "xamarin.facebook.common.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.common.android.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.Core.Android/5.11.2": {
+      "sha512": "4KyGGp/7I4QG/M//OqbTWSM58WoM1MKeMtTTZi6bYp7z1HXXE2RDTUhLDzNGqFMJSTweyzIdO8yanD/hgn6/Iw==",
+      "type": "package",
+      "path": "xamarin.facebook.core.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.Core.Android.dll",
+        "xamarin.facebook.core.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.core.android.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.Login.Android/5.11.2": {
+      "sha512": "sxeFFD9IowXPPGt6v3ePFx0P9Ra1S6gOBEXGgUMtbiSriTpMSVh+K9cabzAErnevutZZbyTpm9buyT09Ei/Mkg==",
+      "type": "package",
+      "path": "xamarin.facebook.login.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.Login.Android.dll",
+        "xamarin.facebook.login.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.login.android.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.Messenger.Android/5.11.2": {
+      "sha512": "b321y9NvC+Nnfk46IpjynWDhHmSEUNF24rVK3FB5bEkG5r3EFv92LILNjz8D95gTlpKFctgtsn+r91HyMBnTrg==",
+      "type": "package",
+      "path": "xamarin.facebook.messenger.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.Messenger.Android.dll",
+        "xamarin.facebook.messenger.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.messenger.android.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.Places.Android/5.11.2": {
+      "sha512": "1xPN3lsqnxr147ODek11iKpoFjayWUtbBDOlgP1hndf4MnqdD1pllpxPUz3/KyiBW/qygeSABOKW3tkMlsWhpg==",
+      "type": "package",
+      "path": "xamarin.facebook.places.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.Places.Android.dll",
+        "xamarin.facebook.places.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.places.android.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.Share.Android/5.11.2": {
+      "sha512": "oNEcb8gMiX102TABfsPcd0Hk/L8aw4lojqNXIhr/Li5uJ6frgFq7/50Bwn8Hzmb/SpNU/0IE4WlQeZJt3JnwAQ==",
+      "type": "package",
+      "path": "xamarin.facebook.share.android/5.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Facebook.Share.Android.dll",
+        "xamarin.facebook.share.android.5.11.2.nupkg.sha512",
+        "xamarin.facebook.share.android.nuspec"
+      ]
+    },
+    "Xamarin.Google.ZXing.Core/3.3.3": {
+      "sha512": "vxTn3kBeZVM4TE4PtE42ZAOv4zxq+wyTIZHtmtLPU5Xc8EOI9MBnvhLjn9fIns0QZ++eW4Yu34gvdvQLuIt8ig==",
+      "type": "package",
+      "path": "xamarin.google.zxing.core/3.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Google.ZXing.Core.dll",
+        "xamarin.google.zxing.core.3.3.3.nupkg.sha512",
+        "xamarin.google.zxing.core.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1676,7 +1972,9 @@
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
       "Xamarin.Android.Support.Design >= 28.0.0.3",
       "Xamarin.Android.Support.v4 >= 28.0.0.3",
-      "Xamarin.Essentials >= 1.3.1"
+      "Xamarin.Essentials >= 1.3.1",
+      "Xamarin.Facebook.Android >= 5.11.2",
+      "Xamarin.Facebook.Login.Android >= 5.11.2"
     ]
   },
   "packageFolders": {
@@ -1740,6 +2038,14 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.3.1, )"
+          },
+          "Xamarin.Facebook.Android": {
+            "target": "Package",
+            "version": "[5.11.2, )"
+          },
+          "Xamarin.Facebook.Login.Android": {
+            "target": "Package",
+            "version": "[5.11.2, )"
           }
         }
       }

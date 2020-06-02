@@ -3,10 +3,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button android:text="Pick Image" 
+    <LinearLayout
+       android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button android:text="Gallery" 
+        android:background="@android:color/transparent"
         android:layout_width="match_parent" 
         android:layout_height="wrap_content" 
         android:id="@+id/MyButton" />  
+     <Button android:text="Camera" 
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:id="@+id/MyButton1" /> 
+    </LinearLayout>
 <ImageView
         android:src="@android:drawable/ic_delete" 
         android:layout_width="match_parent" 

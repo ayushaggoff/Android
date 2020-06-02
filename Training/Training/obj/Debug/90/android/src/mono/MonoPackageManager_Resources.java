@@ -3,6 +3,9 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Training.dll" comes first in this list. */
 		"Training.dll",
+		"Bolts.AppLinks.dll",
+		"Bolts.Tasks.dll",
+		"Google.ZXing.Core.dll",
 		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
@@ -42,6 +45,14 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.VersionedParcelable.dll",
 		"Xamarin.Android.Support.ViewPager.dll",
 		"Xamarin.Essentials.dll",
+		"Xamarin.Facebook.Android.dll",
+		"Xamarin.Facebook.AppLinks.Android.dll",
+		"Xamarin.Facebook.Common.Android.dll",
+		"Xamarin.Facebook.Core.Android.dll",
+		"Xamarin.Facebook.Login.Android.dll",
+		"Xamarin.Facebook.Messenger.Android.dll",
+		"Xamarin.Facebook.Places.Android.dll",
+		"Xamarin.Facebook.Share.Android.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

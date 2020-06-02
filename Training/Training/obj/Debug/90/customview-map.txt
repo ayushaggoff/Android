@@ -1,30 +1,61 @@
+{urn:oasis:names:tc:xliff:document:1.2}g;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+{urn:oasis:names:tc:xliff:document:1.2}g;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 android.support.design.widget.TabItem;obj\Debug\90\res\layout\tablayout.xml
 android.support.design.widget.TabLayout;obj\Debug\90\res\layout\tablayout.xml
 android.support.v4.view.ViewPager;obj\Debug\90\res\layout\tablayout.xml
+android.support.v7.widget.AppCompatImageView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+android.support.v7.widget.AppCompatImageView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
+android.support.v7.widget.CardView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+android.support.v7.widget.CardView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
 android.support.v7.widget.CardView;obj\Debug\90\res\layout\customlistviewlayout.xml
+attr;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+attr;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+bitmap;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_round.xml
+bitmap;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_round.xml
 bitmap;obj\Debug\90\res\drawable\splash_screen.xml
+Button;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+Button;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
+Button;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_blue_round.xml
+Button;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_white_round.xml
 Button;obj\Debug\90\res\layout\addpersonaldetailformlayout.xml
 Button;obj\Debug\90\res\layout\addprofileformlayout.xml
 Button;obj\Debug\90\res\layout\addprofileformlayout1.xml
 Button;obj\Debug\90\res\layout\addprofileformlayout2.xml
 Button;obj\Debug\90\res\layout\dashboardlayout.xml
+Button;obj\Debug\90\res\layout\facebooklayout.xml
 Button;obj\Debug\90\res\layout\fragement1layout.xml
 Button;obj\Debug\90\res\layout\framentbtnlayout.xml
+Button;obj\Debug\90\res\layout\gallerylayout.xml
 Button;obj\Debug\90\res\layout\loginlayout.xml
 Button;obj\Debug\90\res\layout\praclayout.xml
-cache-path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;obj\Debug\90\res\layout\loginlayout.xml
+color;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+color;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\values\values.xml
 color;obj\Debug\90\res\drawable\splash_screen.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
+com.facebook.login.widget.LoginButton;obj\Debug\90\res\layout\facebooklayout.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_background.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_header_background.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_background.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_like_background.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_selector.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_selector.xml
+corners;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\drawable\com_facebook_button_send_background.xml
 corners;obj\Debug\90\res\drawable\roundbutton.xml
 corners;obj\Debug\90\res\drawable\rounded_edittext.xml
 DatePicker;obj\Debug\90\res\layout\activity_main.xml
 DatePicker;obj\Debug\90\res\layout\praclayout.xml
+declare-styleable;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+declare-styleable;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
+dimen;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+dimen;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
 EditText;obj\Debug\90\res\layout\addpersonaldetailformlayout.xml
 EditText;obj\Debug\90\res\layout\addprofileformlayout.xml
 EditText;obj\Debug\90\res\layout\addprofileformlayout1.xml
@@ -33,29 +64,62 @@ EditText;obj\Debug\90\res\layout\enternumber.xml
 EditText;obj\Debug\90\res\layout\fragement1layout.xml
 EditText;obj\Debug\90\res\layout\loginlayout.xml
 EditText;obj\Debug\90\res\layout\praclayout.xml
-external-cache-path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+enum;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+enum;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
+external-cache-path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_activity_layout.xml
+FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
+FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_blue_large.xml
+FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_blue_small.xml
+FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_white_large.xml
+FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_white_small.xml
 FrameLayout;obj\Debug\90\res\layout\framentbtnlayout.xml
 ImageButton;obj\Debug\90\res\layout\listviewlayout.xml
+ImageButton;obj\Debug\90\res\layout\loginlayout.xml
+ImageView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\layout\com_facebook_tooltip_bubble.xml
+ImageView;obj\Debug\90\res\layout\gallerylayout.xml
 ImageView;obj\Debug\90\res\layout\loginlayout.xml
 ImageView;obj\Debug\90\res\layout\welcomescreen.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_background.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_like_background.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_round.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_selector.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_round.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_selector.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\values\values.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\drawable\com_facebook_button_send_background.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\drawable\com_facebook_send_button_icon.xml
+item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\values\values.xml
 item;obj\Debug\90\res\drawable\splash_screen.xml
+item;obj\Debug\90\res\menu\mainmenu.xml
 item;obj\Debug\90\res\values\styles.xml
+layer-list;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_round.xml
+layer-list;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_round.xml
 layer-list;obj\Debug\90\res\drawable\splash_screen.xml
+LinearLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+LinearLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
 LinearLayout;obj\Debug\90\res\layout\addpersonaldetailformlayout.xml
 LinearLayout;obj\Debug\90\res\layout\addprofileformlayout.xml
 LinearLayout;obj\Debug\90\res\layout\addprofileformlayout1.xml
 LinearLayout;obj\Debug\90\res\layout\addprofileformlayout2.xml
+LinearLayout;obj\Debug\90\res\layout\contactlistlayout.xml
 LinearLayout;obj\Debug\90\res\layout\customlistviewlayout.xml
 LinearLayout;obj\Debug\90\res\layout\dashboardlayout.xml
 LinearLayout;obj\Debug\90\res\layout\enternumber.xml
+LinearLayout;obj\Debug\90\res\layout\facebooklayout.xml
 LinearLayout;obj\Debug\90\res\layout\fragement1layout.xml
 LinearLayout;obj\Debug\90\res\layout\fragment2layout.xml
 LinearLayout;obj\Debug\90\res\layout\fragment3layout.xml
 LinearLayout;obj\Debug\90\res\layout\fragment4layout.xml
 LinearLayout;obj\Debug\90\res\layout\framentbtnlayout.xml
+LinearLayout;obj\Debug\90\res\layout\gallerylayout.xml
 LinearLayout;obj\Debug\90\res\layout\listviewlayout.xml
 LinearLayout;obj\Debug\90\res\layout\loginlayout.xml
 LinearLayout;obj\Debug\90\res\layout\mainlayout.xml
@@ -64,28 +128,270 @@ LinearLayout;obj\Debug\90\res\layout\tablayout.xml
 LinearLayout;obj\Debug\90\res\layout\verifyemail.xml
 LinearLayout;obj\Debug\90\res\layout\welcomescreen.xml
 ListView;obj\Debug\90\res\layout\listviewlayout.xml
-paths;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+menu;obj\Debug\90\res\menu\mainmenu.xml
+path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_icon.xml
+path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_favicon_blue.xml
+paths;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+ProgressBar;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+ProgressBar;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_login_fragment.xml
+ProgressBar;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
 RadioButton;obj\Debug\90\res\layout\praclayout.xml
 RadioGroup;obj\Debug\90\res\layout\praclayout.xml
+RelativeLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+RelativeLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_login_fragment.xml
+RelativeLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
+RelativeLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\layout\com_facebook_tooltip_bubble.xml
 RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
 RelativeLayout;obj\Debug\90\res\layout\customlistviewlayout.xml
 RelativeLayout;obj\Debug\90\res\layout\listviewlayout.xml
+requestFocus;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-af\values-af.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ar\values-ar.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-bn\values-bn.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-cs\values-cs.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-da\values-da.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-de\values-de.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-el\values-el.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-en-rGB\values-en-rGB.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-es\values-es.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-es-rES\values-es-rES.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-fi\values-fi.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-fr\values-fr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-fr-rCA\values-fr-rCA.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-gu\values-gu.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-hi\values-hi.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-hr\values-hr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-hu\values-hu.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-id\values-id.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-in\values-in.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-it\values-it.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-iw\values-iw.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ja\values-ja.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-kn\values-kn.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ko\values-ko.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ml\values-ml.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-mr\values-mr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ms\values-ms.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-nb\values-nb.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-nl\values-nl.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pa\values-pa.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pl\values-pl.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pt\values-pt.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pt-rPT\values-pt-rPT.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ro\values-ro.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ru\values-ru.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-sk\values-sk.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-sv\values-sv.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ta\values-ta.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-te\values-te.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-th\values-th.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-tl\values-tl.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-tr\values-tr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-vi\values-vi.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-zh-rCN\values-zh-rCN.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-zh-rHK\values-zh-rHK.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-zh-rTW\values-zh-rTW.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-af\values-af.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ar\values-ar.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-bn\values-bn.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-cs\values-cs.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-da\values-da.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-de\values-de.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-el\values-el.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-en-rGB\values-en-rGB.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-es\values-es.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-es-rES\values-es-rES.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-fi\values-fi.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-fr\values-fr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-fr-rCA\values-fr-rCA.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-gu\values-gu.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-hi\values-hi.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-hr\values-hr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-hu\values-hu.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-in\values-in.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-it\values-it.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-iw\values-iw.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ja\values-ja.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-kn\values-kn.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ko\values-ko.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ml\values-ml.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-mr\values-mr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ms\values-ms.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-nb\values-nb.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-nl\values-nl.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pa\values-pa.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pl\values-pl.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pt\values-pt.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pt-rPT\values-pt-rPT.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ro\values-ro.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ru\values-ru.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-sk\values-sk.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-sv\values-sv.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ta\values-ta.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-te\values-te.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-th\values-th.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-tl\values-tl.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-tr\values-tr.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-vi\values-vi.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-zh-rCN\values-zh-rCN.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-zh-rHK\values-zh-rHK.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-zh-rTW\values-zh-rTW.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\values\values.xml
+resources;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\values\values.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\ic_launcher_background.xml
 resources;obj\Debug\90\res\values\strings.xml
 resources;obj\Debug\90\res\values\styles.xml
 ScrollView;obj\Debug\90\res\layout\praclayout.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_background.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_like_background.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_round.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_selector.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_round.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_selector.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\drawable\com_facebook_button_send_background.xml
+selector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\drawable\com_facebook_send_button_icon.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_background.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_header_background.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_background.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_like_background.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_round.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_selector.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_round.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_selector.xml
+shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\drawable\com_facebook_button_send_background.xml
 shape;obj\Debug\90\res\drawable\roundbutton.xml
 shape;obj\Debug\90\res\drawable\rounded_edittext.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_background.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_auth_dialog_header_background.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_background.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_like_background.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_round.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_blue_bg_selector.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_round.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\drawable\messenger_button_white_bg_selector.xml
+solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\drawable\com_facebook_button_send_background.xml
 solid;obj\Debug\90\res\drawable\roundbutton.xml
 solid;obj\Debug\90\res\drawable\rounded_edittext.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-af\values-af.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ar\values-ar.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-bn\values-bn.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-cs\values-cs.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-da\values-da.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-de\values-de.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-el\values-el.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-en-rGB\values-en-rGB.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-es\values-es.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-es-rES\values-es-rES.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-fi\values-fi.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-fr\values-fr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-fr-rCA\values-fr-rCA.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-gu\values-gu.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-hi\values-hi.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-hr\values-hr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-hu\values-hu.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-id\values-id.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-in\values-in.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-it\values-it.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-iw\values-iw.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ja\values-ja.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-kn\values-kn.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ko\values-ko.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ml\values-ml.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-mr\values-mr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ms\values-ms.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-nb\values-nb.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-nl\values-nl.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pa\values-pa.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pl\values-pl.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pt\values-pt.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-pt-rPT\values-pt-rPT.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ro\values-ro.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ru\values-ru.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-sk\values-sk.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-sv\values-sv.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-ta\values-ta.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-te\values-te.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-th\values-th.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-tl\values-tl.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-tr\values-tr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-vi\values-vi.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-zh-rCN\values-zh-rCN.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-zh-rHK\values-zh-rHK.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values-zh-rTW\values-zh-rTW.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-af\values-af.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ar\values-ar.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-bn\values-bn.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-cs\values-cs.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-da\values-da.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-de\values-de.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-el\values-el.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-en-rGB\values-en-rGB.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-es\values-es.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-es-rES\values-es-rES.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-fi\values-fi.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-fr\values-fr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-fr-rCA\values-fr-rCA.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-gu\values-gu.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-hi\values-hi.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-hr\values-hr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-hu\values-hu.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-in\values-in.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-it\values-it.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-iw\values-iw.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ja\values-ja.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-kn\values-kn.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ko\values-ko.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ml\values-ml.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-mr\values-mr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ms\values-ms.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-nb\values-nb.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-nl\values-nl.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pa\values-pa.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pl\values-pl.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pt\values-pt.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-pt-rPT\values-pt-rPT.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ro\values-ro.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ru\values-ru.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-sk\values-sk.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-sv\values-sv.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-ta\values-ta.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-te\values-te.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-th\values-th.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-tl\values-tl.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-tr\values-tr.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-vi\values-vi.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-zh-rCN\values-zh-rCN.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-zh-rHK\values-zh-rHK.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values-zh-rTW\values-zh-rTW.xml
+string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\values\values.xml
 string;obj\Debug\90\res\values\strings.xml
+style;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\values\values.xml
+style;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\values\values.xml
+style;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\values\values.xml
+style;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\48\jl\res\values\values.xml
 style;obj\Debug\90\res\values\styles.xml
 TableRow;obj\Debug\90\res\layout\customlistviewlayout.xml
+TextView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
+TextView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
+TextView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\45\jl\res\layout\com_facebook_tooltip_bubble.xml
+TextView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_blue_large.xml
+TextView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_blue_small.xml
+TextView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_white_large.xml
+TextView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\messenger_button_send_white_small.xml
+TextView;obj\Debug\90\res\layout\contactlistlayout.xml
 TextView;obj\Debug\90\res\layout\custom_tab.xml
 TextView;obj\Debug\90\res\layout\customlistviewlayout.xml
 TextView;obj\Debug\90\res\layout\dashboardlayout.xml
 TextView;obj\Debug\90\res\layout\enternumber.xml
+TextView;obj\Debug\90\res\layout\facebooklayout.xml
 TextView;obj\Debug\90\res\layout\fragement1layout.xml
 TextView;obj\Debug\90\res\layout\fragment2layout.xml
 TextView;obj\Debug\90\res\layout\fragment3layout.xml
@@ -98,3 +404,5 @@ TextView;obj\Debug\90\res\layout\verifyemail.xml
 TextView;obj\Debug\90\res\layout\welcomescreen.xml
 Toolbar;obj\Debug\90\res\layout\listviewlayout.xml
 Toolbar;obj\Debug\90\res\layout\tablayout.xml
+vector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_button_icon.xml
+vector;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\43\jl\res\drawable\com_facebook_favicon_blue.xml

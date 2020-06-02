@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rf9S4O+oi76K+F3GLOcP3xf63LLHHNpFoWYJY7jHJFQzNZWyJAKywpE6HlFNYrTZjgw8S4ry0/7wIAqzG+V+fQ==",
+  "dgSpecHash": "rUv08iEdiKZ9BOE7qBcns99ObqZ7RhiILDGUzOdh4UBPURgus0XSo95+xhrKUgdsLciFj5JD1VP0AiRLi9kV3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Training\\Training\\Training.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ayusha\\.nuget\\packages\\bolts\\1.4.0.1\\bolts.1.4.0.1.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
@@ -43,7 +44,16 @@
     "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.android.support.vector.drawable\\28.0.0.3\\xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512"
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.android\\5.11.2\\xamarin.facebook.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.applinks.android\\5.11.2\\xamarin.facebook.applinks.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.common.android\\5.11.2\\xamarin.facebook.common.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.core.android\\5.11.2\\xamarin.facebook.core.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.login.android\\5.11.2\\xamarin.facebook.login.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.messenger.android\\5.11.2\\xamarin.facebook.messenger.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.places.android\\5.11.2\\xamarin.facebook.places.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.facebook.share.android\\5.11.2\\xamarin.facebook.share.android.5.11.2.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.google.zxing.core\\3.3.3\\xamarin.google.zxing.core.3.3.3.nupkg.sha512"
   ],
   "logs": []
 }

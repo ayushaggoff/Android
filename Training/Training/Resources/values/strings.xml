@@ -16,4 +16,9 @@
   <string name="menuItem1">Gallery</string>
   <string name="menuItem2">Camera</string>
   <string name="menuItem3">Item 3</string>
+
+
+  <string name="facebook_app_id">2834778739965321</string>
+  <string name="fb_login_protocol_scheme">fb2834778739965321</string>
+
 </resources>

@@ -18,6 +18,8 @@ namespace Training.Activity
     [Activity(Label = "LogListActivity")]
     public class LogListActivity : AppCompatActivity
     {
+        public static readonly int PickImageId = 1000;
+        private ImageView _imageView;
         ListView myList;
         Android.Support.V7.Widget.AppCompatImageButton btnHome;
         Android.Support.V7.Widget.AppCompatImageButton btnContact;
@@ -26,12 +28,13 @@ namespace Training.Activity
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.ListViewLayout);
-
+            _imageView = FindViewById<ImageView>(Resource.Id.imageView1);
             myList = FindViewById<ListView>(Resource.Id.line1);
             btnHome = FindViewById<Android.Support.V7.Widget.AppCompatImageButton>(Resource.Id.imageButton1);
             btnContact = FindViewById<Android.Support.V7.Widget.AppCompatImageButton>(Resource.Id.imageButton2);
             myList.Adapter = new CustomLogListAdapter(LogListData.Log);
             myList.ItemClick += MyList_ItemClick;
+
         }
 
         private void MyList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -49,7 +52,10 @@ namespace Training.Activity
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(DashboardActivity));
+           
+
+
+            Intent intent = new Intent(this, typeof(GalleryActivity1));
                StartActivity(intent);
         }
         private void BtnContact_Click(object sender, EventArgs e)
@@ -57,5 +63,9 @@ namespace Training.Activity
             Intent intent = new Intent(this, typeof(ContactListActivity));
             StartActivity(intent);
         }
+
+
+       
+
     }
 }

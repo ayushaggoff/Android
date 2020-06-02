@@ -69,8 +69,10 @@
     <Compile Include="Activity\AddProfileForm1Activity.cs" />
     <Compile Include="Activity\AddProfileForm2Activity.cs" />
     <Compile Include="Activity\ArrayList.cs" />
+    <Compile Include="Activity\ContactListActivity.cs" />
     <Compile Include="Activity\DashboardActivity.cs" />
     <Compile Include="Activity\FragementBtnActivity.cs" />
+    <Compile Include="Activity\GalleryActivity1.cs" />
     <Compile Include="Activity\LoginActivity.cs" />
     <Compile Include="Activity\LogListActivity.cs" />
     <Compile Include="Activity\SplashScreenActivity.cs" />
@@ -79,11 +81,13 @@
     <Compile Include="Adapter\CustomLogListAdapter.cs" />
     <Compile Include="Adapter\MyPageAdapter.cs" />
     <Compile Include="Adapter\PageAdapter.cs" />
+    <Compile Include="ApplicationContext\ContentResolver.cs" />
     <Compile Include="Fragments\Fragment1.cs" />
     <Compile Include="Fragments\Fragment2.cs" />
     <Compile Include="Fragments\Fragment3.cs" />
     <Compile Include="Fragments\Fragment4.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Model\FacebookResult.cs" />
     <Compile Include="Model\LogList.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -132,6 +136,12 @@
       <Version>28.0.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Facebook.Android">
+      <Version>5.11.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Facebook.Login.Android">
+      <Version>5.11.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\PracLayout.xml">
@@ -279,6 +289,33 @@
     <AndroidResource Include="Resources\layout\MainLayout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ContactListLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icons_contact1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icons_contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\GalleryLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\FaceBooklayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\mainMenu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

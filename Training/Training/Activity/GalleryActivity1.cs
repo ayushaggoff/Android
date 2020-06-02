@@ -13,6 +13,7 @@ using Android.Provider;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
+using Android.Webkit;
 using Android.Widget;
 
 namespace Training.Activity
@@ -21,6 +22,7 @@ namespace Training.Activity
     public class GalleryActivity1 : AppCompatActivity
     {
         Button button;
+        Button button1;
         public static readonly int PickImageId = 1000;
         private ImageView _imageView;
         protected override void OnCreate(Bundle bundle)
@@ -31,49 +33,32 @@ namespace Training.Activity
             TryToGetPermission();
             _imageView = FindViewById<ImageView>(Resource.Id.imageView1);
             button = FindViewById<Button>(Resource.Id.MyButton);
+            button1 = FindViewById<Button>(Resource.Id.MyButton1);
             button.Click += ButtonOnClick;
+            button1.Click += ButtonOnClick1;
         }
 
-        //protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
-        //{
-        //    base.OnActivityResult(requestCode, resultCode, data);
-        //    Bitmap bitmap = (Bitmap)data.Extras.Get("data");
-        //    _imageView.SetImageBitmap(bitmap);
-        //}
-        //private void ButtonOnClick(object sender, System.EventArgs e)
-        //{
-        //    Intent intent = new Intent(MediaStore.ActionImageCapture);
-        //    StartActivityForResult(intent, 0);
-        //}
 
-
-        private void ButtonOnClick(object sender, System.EventArgs e)
+        private void ButtonOnClick1(object sender, System.EventArgs e)
         {
-            PopupMenu menu = new PopupMenu(this, button);
-            menu.Inflate(Resource.Menu.mainMenu);
-            menu.Show();
+            Intent intent = new Intent(MediaStore.ActionImageCapture);
+            StartActivityForResult(intent, 0);
+        }
 
-            menu.MenuItemClick += (s1, arg1) =>
-            {
-                Intent = new Intent();
-                   Intent.SetType("image/*");
-                    Intent.SetAction(Intent.ActionGetContent);
-                    StartActivityForResult(Intent.CreateChooser(Intent, "Select Picture"), PickImageId);
-            };
 
-            menu.MenuItemClick += (s2, arg1) =>
-            {
 
-                Intent intent = new Intent(MediaStore.ActionImageCapture);
-                StartActivityForResult(intent, 0);
-
-            };
+        private void ButtonOnClick(object sender, EventArgs eventArgs)
+        {
+            Intent = new Intent();
+            Intent.SetType("image/*");
+            Intent.SetAction(Intent.ActionGetContent);
+            StartActivityForResult(Intent.CreateChooser(Intent, "Select Picture"), PickImageId);
         }
 
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
         {
-            base.OnActivityResult(requestCode, resultCode, data);
+        base.OnActivityResult(requestCode, resultCode, data);
             if (requestCode == 0 && (data != null))
             {
                 Bitmap bitmap = (Bitmap)data.Extras.Get("data");
@@ -196,6 +181,24 @@ namespace Training.Activity
         //        _imageView.SetImageURI(uri);
         //    }
         //}
+
+
+
+
+
+        //protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        //{
+        //    base.OnActivityResult(requestCode, resultCode, data);
+        //    Bitmap bitmap = (Bitmap)data.Extras.Get("data");
+        //    _imageView.SetImageBitmap(bitmap);
+        //}
+        //private void ButtonOnClick(object sender, System.EventArgs e)
+        //{
+        //    Intent intent = new Intent(MediaStore.ActionImageCapture);
+        //    StartActivityForResult(intent, 0);
+        //}
+
+
     }
 }
 

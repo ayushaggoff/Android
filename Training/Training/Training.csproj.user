@@ -3,6 +3,6 @@
   <PropertyGroup>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <SelectedDevice>Pixel_3_XL_API_29_6.3</SelectedDevice>
+    <SelectedDevice>Samsung SM-M305F</SelectedDevice>
   </PropertyGroup>
 </Project>
