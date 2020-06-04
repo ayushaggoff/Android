@@ -7,25 +7,41 @@ using System.Threading.Tasks;
 using Android;
 using Android.App;
 using Android.Content;
+using Android.Gms.Auth.Api;
+using Android.Gms.Auth.Api.SignIn;
+using Android.Gms.Common.Apis;
+using Android.Gms.Tasks;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Firebase;
+using Firebase.Auth;
 using Newtonsoft.Json;
 using Org.Json;
 using Training.Model;
+using Xamarin.Auth;
 using Xamarin.Facebook;
 using Xamarin.Facebook.Login;
 
 namespace Training.Activity
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = true)]
-    public class LoginActivity : AppCompatActivity, IFacebookCallback,GraphRequest.IGraphJSONObjectCallback
+    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = false)]
+    public class LoginActivity : AppCompatActivity, IFacebookCallback,GraphRequest.IGraphJSONObjectCallback, IOnSuccessListener,IOnFailureListener
+
     {
+
+        ImageButton btn_SigninGoogleButton;
+        GoogleSignInOptions gso;
+        GoogleApiClient googleApiClient;
+
+
+        FirebaseAuth firebaseAuth;
+        int fb_requestcode=2;
         ICallbackManager mCallBackManager;
         MyProfileTracker mProfileTracker;
-        ImageButton btn_fb;
+        ImageButton btn_fb,btn_twitter;
         string Name;
         Button btnLogin;
         EditText email, password;
@@ -35,16 +51,17 @@ namespace Training.Activity
         protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            await TryToGetPermission();
+          //  await TryToGetPermission();
             FacebookSdk.SdkInitialize(this.ApplicationContext);
 
 
             SetContentView(Resource.Layout.LoginLayout);
-
-           
+          
 
 
             btn_fb = FindViewById<ImageButton>(Resource.Id.imageButton1);
+            btn_twitter = FindViewById<ImageButton>(Resource.Id.imageButton2);
+            btn_SigninGoogleButton = FindViewById<ImageButton>(Resource.Id.imageButton3);
             mCallBackManager = CallbackManagerFactory.Create();
 
 
@@ -57,16 +74,78 @@ namespace Training.Activity
             };
 
 
-            email = FindViewById<EditText>(Resource.Id.editText_email);
+                email = FindViewById<EditText>(Resource.Id.editText_email);
             password = FindViewById<EditText>(Resource.Id.editText_password);
             btnLogin = FindViewById<Button>(Resource.Id.buttonlogin);
             mCbxRemMe = FindViewById<CheckBox>(Resource.Id.cbxRememberMe);
             dialog = new Android.App.AlertDialog.Builder(this);
 
+
+
+            btn_SigninGoogleButton.Click += SigninButton_Click;
+            gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
+               .RequestIdToken("823954020212-pous4rh94fc1i9rm1i3g46fi2j4ot4q1.apps.googleusercontent.com")
+               .RequestEmail()
+               .Build();
+
+            googleApiClient = new GoogleApiClient.Builder(this)
+                .AddApi(Auth.GOOGLE_SIGN_IN_API, gso).Build();
+            googleApiClient.Connect();
+
+            firebaseAuth = GetFirebaseAuth();
+
             //  btnLogin.Click += BtnLogin_Click;
         }
 
-         protected override void OnResume()
+        #region google signin
+        private FirebaseAuth GetFirebaseAuth()
+        {
+            var app = FirebaseApp.InitializeApp(this);
+            FirebaseAuth mAuth;
+
+            if (app == null)
+            {
+                var options = new FirebaseOptions.Builder()
+                    .SetProjectId("training-ea64f")
+                    .SetApplicationId("training-ea64f")
+                    .SetApiKey("AIzaSyAYuOLei2bceIwSMgSVf5boMJPMnWxOS4c")
+                    .SetDatabaseUrl("https://training-ea64f.firebaseio.com")
+                    .SetStorageBucket("training-ea64f.appspot.com")
+                    .Build();
+                app = FirebaseApp.InitializeApp(this, options);
+                mAuth = FirebaseAuth.Instance;
+            }
+            else
+            {
+                mAuth = FirebaseAuth.Instance;
+            }
+            return mAuth;
+        }
+
+
+
+        private void SigninButton_Click(object sender, System.EventArgs e)
+        {
+            if (firebaseAuth.CurrentUser == null)
+            {
+       
+                var intent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
+                 StartActivityForResult(intent, 1);
+            }
+        }
+        private void LoginWithFirebase(GoogleSignInAccount account)
+
+        {
+            var credentials = GoogleAuthProvider.GetCredential(account.IdToken, null);
+            firebaseAuth.SignInWithCredential(credentials).AddOnSuccessListener(this)
+                .AddOnFailureListener(this);
+        }
+
+
+        #endregion
+
+        protected override void OnResume()
+        
         {
             base.OnResume();
             this.btnLogin.Click += this.BtnLogin_Click;
@@ -162,8 +241,22 @@ namespace Training.Activity
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            mCallBackManager.OnActivityResult(requestCode, (int)resultCode, data);
+            if (requestCode == 64206)
+            {
+                mCallBackManager.OnActivityResult(requestCode, (int)resultCode, data);
+            }
+            else if (requestCode == 1)
+            {
+                GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(data);
+                if (result.IsSuccess)
+                {
+                    GoogleSignInAccount account = result.SignInAccount;
+                    LoginWithFirebase(account);
+
+                }
+            }
         }
+
 
         public void OnCancel()
         {
@@ -183,7 +276,9 @@ namespace Training.Activity
             request.Parameters = parameters;
             request.ExecuteAsync();
 
+
            
+
         }
         public void OnCompleted(JSONObject json, GraphResponse response)
         {
@@ -198,6 +293,11 @@ namespace Training.Activity
 
             this.StartActivity(intent);
         }
+
+        public void OnFailure(Java.Lang.Exception e)
+        {
+            Toast.MakeText(this, "Login Failed", ToastLength.Short).Show();
+        }
         protected override void OnDestroy()
         {
             base.OnDestroy();
@@ -205,82 +305,82 @@ namespace Training.Activity
 
 
 
-        #region permisson
-        async Task TryToGetPermission()
-        {
-            if ((int)Build.VERSION.SdkInt >= 23)
-            {
-                await GetPermission();
-                return;
-            }
-        }
+       // #region permisson
+       // async Task TryToGetPermission()
+       // {
+       //     if ((int)Build.VERSION.SdkInt >= 23)
+       //     {
+       //         await GetPermission();
+       //         return;
+       //     }
+       // }
 
-        const int RequestLocationId = 0;
+       // const int RequestLocationId = 0;
 
-        readonly string[] PermissionGroupLocation =
-       {
-            Manifest.Permission.AccessCoarseLocation,
-            Manifest.Permission.AccessFineLocation
-        };
+       // readonly string[] PermissionGroupLocation =
+       //{
+       //     Manifest.Permission.AccessCoarseLocation,
+       //     Manifest.Permission.AccessFineLocation
+       // };
 
-        async Task GetPermission()
-        {
-            string permission = Manifest.Permission.AccessFineLocation;
+       // async Task GetPermission()
+       // {
+       //     string permission = Manifest.Permission.AccessFineLocation;
 
-            if (CheckSelfPermission(permission) == (int)Android.Content.PM.Permission.Granted)
-            {
-                Toast.MakeText(this, "Loaction Permission Granted", ToastLength.Short).Show();
-                return;
-            }
+       //     if (CheckSelfPermission(permission) == (int)Android.Content.PM.Permission.Granted)
+       //     {
+       //         Toast.MakeText(this, "Loaction Permission Granted", ToastLength.Short).Show();
+       //         return;
+       //     }
 
-            if (ShouldShowRequestPermissionRationale(permission))
-            {
-                Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
-                alert.SetTitle("Permissions Needed");
-                alert.SetMessage("The application need special permissions to continue");
-                alert.SetPositiveButton("Request Permissions", (senderAlert, args) =>
-                {
-                    RequestPermissions(PermissionGroupLocation, RequestLocationId);
-                });
+       //     if (ShouldShowRequestPermissionRationale(permission))
+       //     {
+       //         Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
+       //         alert.SetTitle("Permissions Needed");
+       //         alert.SetMessage("The application need special permissions to continue");
+       //         alert.SetPositiveButton("Request Permissions", (senderAlert, args) =>
+       //         {
+       //             RequestPermissions(PermissionGroupLocation, RequestLocationId);
+       //         });
 
-                alert.SetNegativeButton("Cancel", (senderAlert, args) =>
-                {
-                    Toast.MakeText(this, "Cancelled!", ToastLength.Short).Show();
-                });
+       //         alert.SetNegativeButton("Cancel", (senderAlert, args) =>
+       //         {
+       //             Toast.MakeText(this, "Cancelled!", ToastLength.Short).Show();
+       //         });
 
-                Dialog dialog = alert.Create();
-                dialog.Show();
+       //         Dialog dialog = alert.Create();
+       //         dialog.Show();
 
 
-                return;
-            }
+       //         return;
+       //     }
 
-            RequestPermissions(PermissionGroupLocation, RequestLocationId);
-        }
+       //     RequestPermissions(PermissionGroupLocation, RequestLocationId);
+       // }
 
-        public override async void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            switch (requestCode)
-            {
-                case RequestLocationId:
-                    {
-                        if (grantResults[0] == (int)Android.Content.PM.Permission.Granted)
-                        {
-                            Toast.MakeText(this, "Special permissions granted", ToastLength.Short).Show();
+       // public override async void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+       // {
+       //     switch (requestCode)
+       //     {
+       //         case RequestLocationId:
+       //             {
+       //                 if (grantResults[0] == (int)Android.Content.PM.Permission.Granted)
+       //                 {
+       //                     Toast.MakeText(this, "Special permissions granted", ToastLength.Short).Show();
 
-                        }
-                        else
-                        {
+       //                 }
+       //                 else
+       //                 {
 
-                            Toast.MakeText(this, "Special permissions denied", ToastLength.Short).Show();
+       //                     Toast.MakeText(this, "Special permissions denied", ToastLength.Short).Show();
 
-                        }
-                    }
-                    break;
-            }
+       //                 }
+       //             }
+       //             break;
+       //     }
 
-        }
+       // }
 
-        #endregion
+       // #endregion
     }
 }
