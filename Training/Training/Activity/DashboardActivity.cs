@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Android.App;
+using Firebase.Messaging;
 using Android.Content;
 using Android.Graphics;
+using Firebase.Iid;
+using Android.Util;
+
+using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Firebase.Auth;
 using Xamarin.Facebook.AppLinks;
 using Xamarin.Facebook.Login;
+using Android.Gms.Common;
 
 namespace Training.Activity
 {
@@ -21,7 +27,13 @@ namespace Training.Activity
     {
         public static int ResultCode = 999;
 
-        string Email;
+        static readonly string TAG = "MainActivity";
+        internal static readonly string CHANNEL_ID = "my_notification_channel";
+        internal static readonly int NOTIFICATION_ID = 100;
+        TextView msgText;
+
+
+        string email;
         Button btnAddProfile;
         Button btnFragment,btnLogout;
         Button btnTab;
@@ -32,10 +44,28 @@ namespace Training.Activity
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
-            
-            string email = pref.GetString("Email", String.Empty);
-            string password = pref.GetString("Password", String.Empty);
             SetContentView(Resource.Layout.DashboardLayout);
+            var logTokenButton = FindViewById<Button>(Resource.Id.logTokenButton);
+            logTokenButton.Click += delegate {
+                Log.Debug(TAG, "InstanceID token: " + FirebaseInstanceId.Instance.Token);
+            };
+
+            var subscribeButton = FindViewById<Button>(Resource.Id.subscribeButton);
+            subscribeButton.Click += delegate {
+                FirebaseMessaging.Instance.SubscribeToTopic("news");
+                Log.Debug(TAG, "Subscribed to remote notifications");
+            };
+
+
+
+
+            msgText = FindViewById<TextView>(Resource.Id.textView1);
+             email = pref.GetString("Email", String.Empty);
+          
+            IsPlayServicesAvailable();
+            CreateNotificationChannel();
+
+            string password = pref.GetString("Password", String.Empty);
             string datafromlogin = Intent.GetStringExtra("Name");
             TextView_Name = FindViewById<TextView>(Resource.Id.textview_name);
             btnLogout = FindViewById<Button>(Resource.Id.button4);
@@ -66,9 +96,14 @@ namespace Training.Activity
             this.btnLogout.Click += (obj, e) =>
             {
                 LoginManager.Instance.LogOut();
-               
-            
-            Intent intent = new Intent(this,typeof(LoginActivity));
+
+
+                FirebaseAuth.Instance.SignOut();
+                
+
+
+
+                Intent intent = new Intent(this,typeof(LoginActivity));
                   
             StartActivity(intent);
              Finish();
@@ -86,6 +121,50 @@ namespace Training.Activity
             //this.btnAddProfile.Click -= this.BtnAddProfile_Click;
         }
 
+        #region Push Notification
+        public bool IsPlayServicesAvailable()
+        {
+            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
+            if (resultCode != ConnectionResult.Success)
+            {
+                if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
+                    msgText.Text = GoogleApiAvailability.Instance.GetErrorString(resultCode);
+                else
+                {
+                    msgText.Text = "This device is not supported";
+                    Finish();
+                }
+                return false;
+            }
+            else
+            {
+                msgText.Text = "Google Play Services is available.";
+                return true;
+            }
+        }
+
+        void CreateNotificationChannel()
+        {
+            if (Build.VERSION.SdkInt < BuildVersionCodes.O)
+            {
+                // Notification channels are new in API 26 (and not a part of the
+                // support library). There is no need to create a notification
+                // channel on older versions of Android.
+                return;
+            }
+
+            var channel = new NotificationChannel(CHANNEL_ID,
+                                                  "FCM Notifications",
+                                                  NotificationImportance.Default)
+            {
+
+                Description = "Firebase Cloud Messages appear in this channel"
+            };
+
+            var notificationManager = (NotificationManager)GetSystemService(Android.Content.Context.NotificationService);
+            notificationManager.CreateNotificationChannel(channel);
+        }
+        #endregion
         private void BtnFragment_Click(object sender, System.EventArgs e)
         {
             //Intent intent = new Intent(this, typeof(FragementBtnActivity));

@@ -14,6 +14,13 @@ using Android.Gms.Tasks;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
+
+using Android.Gms.Common;
+using Android.Util;
+
+
+
+
 using Android.Views;
 using Android.Widget;
 using Firebase;
@@ -27,7 +34,7 @@ using Xamarin.Facebook.Login;
 
 namespace Training.Activity
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = true)]
     public class LoginActivity : AppCompatActivity, IFacebookCallback,GraphRequest.IGraphJSONObjectCallback, IOnSuccessListener,IOnFailureListener
 
     {
@@ -126,12 +133,11 @@ namespace Training.Activity
 
         private void SigninButton_Click(object sender, System.EventArgs e)
         {
-            if (firebaseAuth.CurrentUser == null)
-            {
-       
+            
                 var intent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
-                 StartActivityForResult(intent, 1);
-            }
+                StartActivityForResult(intent, 1);
+            
+          
         }
         private void LoginWithFirebase(GoogleSignInAccount account)
 
@@ -282,16 +288,20 @@ namespace Training.Activity
         }
         public void OnCompleted(JSONObject json, GraphResponse response)
         {
-            string data = json.ToString();
-            FacebookResult result = JsonConvert.DeserializeObject<FacebookResult>(data);
-            Console.WriteLine(json.ToString());
-            Name = result.email;
+            Intent intent;
+            if (json != null)
+            {
+                string data = json.ToString();
+                FacebookResult result = JsonConvert.DeserializeObject<FacebookResult>(data);
+                Console.WriteLine(json.ToString());
+                Name = result.email;
+            }
+                intent = new Intent(this, typeof(DashboardActivity));
+                intent.PutExtra("Name", Name);
+                this.StartActivity(intent);
+           
 
-            Intent intent = new Intent(this, typeof(DashboardActivity));
-            intent.PutExtra("Name", Name);
 
-
-            this.StartActivity(intent);
         }
 
         public void OnFailure(Java.Lang.Exception e)

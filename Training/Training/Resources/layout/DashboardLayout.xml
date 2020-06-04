@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -9,7 +9,7 @@
            android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:gravity="center_vertical">
-    <TextView
+                <TextView
         android:text="Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +24,20 @@
         android:layout_gravity="right" 
        android:id="@+id/button4" />
         </LinearLayout>
-    <Button android:text="Fragments" 
+    <Button
+  android:id="@+id/logTokenButton"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="left"
+  android:text="Notification" />
+    <Button
+  android:id="@+id/subscribeButton"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="left"
+  android:layout_marginTop="20dp"
+  android:text="Subscribe to Notifications" />
+        <Button android:text="Fragments" 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2" />
@@ -42,4 +55,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
         android:id="@+id/textview_name"/>
+<TextView
+        android:text=" "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="10dp" />
 </LinearLayout>
