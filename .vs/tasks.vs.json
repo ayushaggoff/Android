@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-google-services",
+      "appliesTo": "Training/Training/Resources/google-services.json",
+      "type": "launch"
+    }
+  ]
+}

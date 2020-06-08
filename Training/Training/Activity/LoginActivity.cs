@@ -31,6 +31,7 @@ using Training.Model;
 using Xamarin.Auth;
 using Xamarin.Facebook;
 using Xamarin.Facebook.Login;
+using XamarinAuth;
 
 namespace Training.Activity
 {
@@ -117,21 +118,35 @@ namespace Training.Activity
                                 requestTokenUrl: new Uri("https://api.twitter.com/oauth/request_token"),
                                 authorizeUrl: new Uri("https://api.twitter.com/oauth/authorize"),
                                 accessTokenUrl: new Uri("https://api.twitter.com/oauth/access_token"),
-                                callbackUrl: new Uri("http://mobile.twitter.com"));
+                                callbackUrl: new Uri("http://mobile.twitter.com/home"));
             auth.AllowCancel = true;
-            auth.Completed += twitter_auth_Completed;
             var ui = auth.GetUI(this);
             StartActivity(ui);
-         
-
+            auth.Completed += twitter_auth_Completed;
+           
         }
 
-        private void twitter_auth_Completed(object sender, AuthenticatorCompletedEventArgs eventArgs)
+        private async void twitter_auth_Completed(object sender, AuthenticatorCompletedEventArgs e)
         {
-            if (eventArgs.IsAuthenticated)
+            
+            if (e.IsAuthenticated)
             {
-                Toast.MakeText(this, "Logged-In", ToastLength.Short).Show();
-                //Finish();
+                var request = new OAuth1Request("GET",
+                               new Uri("https://api.twitter.com/1.1/account/verify_credentials.json"),
+                               null,
+                               e.Account);
+
+                //Get response here
+                var response = await request.GetResponseAsync();
+                if (response != null)
+                {
+                    //Get the user data here
+                   var userData = response.GetResponseText();
+                    var twitteruser = JsonConvert.DeserializeObject<TwitterUser>(userData);
+                   var intent = new Intent(this, typeof(DashboardActivity));
+                    intent.PutExtra("Name", twitteruser.name);
+                    this.StartActivity(intent);
+                }
             }
         }
         #endregion
@@ -309,7 +324,6 @@ namespace Training.Activity
 
         public void OnCancel()
         {
-            throw new NotImplementedException();
         }
 
         public void OnError(FacebookException error)

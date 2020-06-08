@@ -24,7 +24,7 @@ using Android.Gms.Plus.Model.People;
 
 namespace Training.Activity
 {
-    [Activity(Label = "GoogleSignInTryActivity",MainLauncher =true)]
+    [Activity(Label = "GoogleSignInTryActivity",MainLauncher =false)]
     public class GoogleSignInTryActivity : AppCompatActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         private GoogleApiClient mGoogleApiClient;
@@ -42,6 +42,7 @@ namespace Training.Activity
         private TextView mGender;
         private TextView mRelationship;
 
+      
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);

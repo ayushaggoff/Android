@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
-
 using System.Collections.Generic;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -26,12 +23,22 @@ namespace Training
         const string TAG = "MyFirebaseMsgService";
         public override void OnMessageReceived(RemoteMessage message)
         {
+            Log.Debug("/////////////////","////////////////////////");  
+            foreach(var li in message.Data.Values)
+            {
+                Log.Debug("/////////////////", li);
+
+            }
+            //   Log.Debug("****",message.Data.Values.ToString());  
+            Log.Debug("/////////////////","////////////////////////");  
             Log.Debug(TAG, "From: " + message.From);
             Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
+            var body = message.GetNotification().Body;
+            SendNotification(body, message.Data);
         }
         void SendNotification(string messageBody, IDictionary<string, string> data)
         {
-            var intent = new Intent(this, typeof(MainActivity));
+            var intent = new Intent(this, typeof(DashboardActivity));
             intent.AddFlags(ActivityFlags.ClearTop);
             foreach (var key in data.Keys)
             {

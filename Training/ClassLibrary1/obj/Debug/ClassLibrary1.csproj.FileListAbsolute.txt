@@ -1,0 +1,7 @@
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\ClassLibrary1\obj\Debug\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
