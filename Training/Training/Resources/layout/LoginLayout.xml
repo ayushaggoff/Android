@@ -114,7 +114,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="#20318B"
-                android:src="@drawable/ic_facebook"/>
+                android:src="@android:drawable/ic_lock_idle_alarm"/>
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="50dp"

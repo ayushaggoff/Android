@@ -89,7 +89,6 @@ namespace Training.Activity
 
 
 
-            btn_SigninGoogleButton.Click += SigninButton_Click;
             gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
                .RequestIdToken("823954020212-pous4rh94fc1i9rm1i3g46fi2j4ot4q1.apps.googleusercontent.com")
                .RequestEmail()
@@ -99,10 +98,44 @@ namespace Training.Activity
                 .AddApi(Auth.GOOGLE_SIGN_IN_API, gso).Build();
             googleApiClient.Connect();
 
-            firebaseAuth = GetFirebaseAuth();
+           firebaseAuth = GetFirebaseAuth();
 
+
+            btn_twitter.Click += Btn_twitter_Click;
             //  btnLogin.Click += BtnLogin_Click;
         }
+
+
+
+        #region Twitter signin
+        private void Btn_twitter_Click(object sender, EventArgs e)
+        {
+
+            var auth = new OAuth1Authenticator(
+                                consumerKey: "oT9PQ1bWS5opHVGolCbkDAUEX",
+                                consumerSecret: "652Tmze5cpPZyomaW4TAud5zDvX45ZHaothgbfSje4I6CMUZKs",
+                                requestTokenUrl: new Uri("https://api.twitter.com/oauth/request_token"),
+                                authorizeUrl: new Uri("https://api.twitter.com/oauth/authorize"),
+                                accessTokenUrl: new Uri("https://api.twitter.com/oauth/access_token"),
+                                callbackUrl: new Uri("http://mobile.twitter.com"));
+            auth.AllowCancel = true;
+            auth.Completed += twitter_auth_Completed;
+            var ui = auth.GetUI(this);
+            StartActivity(ui);
+         
+
+        }
+
+        private void twitter_auth_Completed(object sender, AuthenticatorCompletedEventArgs eventArgs)
+        {
+            if (eventArgs.IsAuthenticated)
+            {
+                Toast.MakeText(this, "Logged-In", ToastLength.Short).Show();
+                //Finish();
+            }
+        }
+        #endregion
+
 
         #region google signin
         private FirebaseAuth GetFirebaseAuth()
@@ -132,15 +165,22 @@ namespace Training.Activity
 
 
         private void SigninButton_Click(object sender, System.EventArgs e)
-        {
-            
-                var intent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
-                StartActivityForResult(intent, 1);
-            
-          
+         {
+
+            //if (firebaseAuth.CurrentUser == null)
+            //{
+            //    var intent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
+            //    StartActivityForResult(intent, 1);
+            //}
+            //else
+            //{
+            //    firebaseAuth.SignOut();
+            //}
+
+            var intent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
+               StartActivityForResult(intent, 1);     
         }
         private void LoginWithFirebase(GoogleSignInAccount account)
-
         {
             var credentials = GoogleAuthProvider.GetCredential(account.IdToken, null);
             firebaseAuth.SignInWithCredential(credentials).AddOnSuccessListener(this)
@@ -150,16 +190,19 @@ namespace Training.Activity
 
         #endregion
 
-        protected override void OnResume()
-        
+        protected override void OnResume()    
         {
             base.OnResume();
             this.btnLogin.Click += this.BtnLogin_Click;
+            btn_SigninGoogleButton.Click += SigninButton_Click;
+
         }
         protected override void OnPause()
         {
             base.OnPause();
             this.btnLogin.Click -= this.BtnLogin_Click;
+            btn_SigninGoogleButton.Click -= SigninButton_Click;
+
         }
 
         private void BtnLogin_Click(object sender, System.EventArgs e)
@@ -281,10 +324,6 @@ namespace Training.Activity
             parameters.PutString("fields", "id,name,age_range,email");
             request.Parameters = parameters;
             request.ExecuteAsync();
-
-
-           
-
         }
         public void OnCompleted(JSONObject json, GraphResponse response)
         {
