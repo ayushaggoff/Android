@@ -23,14 +23,14 @@ namespace Training
         const string TAG = "MyFirebaseMsgService";
         public override void OnMessageReceived(RemoteMessage message)
         {
-            Log.Debug("/////////////////","////////////////////////");  
+            Log.Debug("/////////////","/////////////");  
             foreach(var li in message.Data.Values)
             {
                 Log.Debug("/////////////////", li);
 
             }
             //   Log.Debug("****",message.Data.Values.ToString());  
-            Log.Debug("/////////////////","////////////////////////");  
+            Log.Debug("//","//");  
             Log.Debug(TAG, "From: " + message.From);
             Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
             var body = message.GetNotification().Body;
@@ -39,7 +39,7 @@ namespace Training
         void SendNotification(string messageBody, IDictionary<string, string> data)
         {
             var intent = new Intent(this, typeof(DashboardActivity));
-            intent.AddFlags(ActivityFlags.ClearTop);
+        intent.AddFlags(ActivityFlags.SingleTop);
             foreach (var key in data.Keys)
             {
                 intent.PutExtra(key, data[key]);
@@ -48,17 +48,21 @@ namespace Training
             var pendingIntent = PendingIntent.GetActivity(this,
                                                           DashboardActivity.NOTIFICATION_ID,
                                                           intent,
-                                                          PendingIntentFlags.OneShot);
+                                                          PendingIntentFlags.UpdateCurrent);
 
             var notificationBuilder = new NotificationCompat.Builder(this, DashboardActivity.CHANNEL_ID)
                                       .SetSmallIcon(Resource.Drawable.icon_notification)
                                       .SetContentTitle("FCM Message")
                                       .SetContentText(messageBody)
+                                       
                                       .SetAutoCancel(true)
                                       .SetContentIntent(pendingIntent);
 
             var notificationManager = NotificationManagerCompat.From(this);
             notificationManager.Notify(DashboardActivity.NOTIFICATION_ID, notificationBuilder.Build());
         }
+
+        
+
     }
 }

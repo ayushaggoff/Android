@@ -131,22 +131,22 @@ namespace Training.Activity
             
             if (e.IsAuthenticated)
             {
-                var request = new OAuth1Request("GET",
-                               new Uri("https://api.twitter.com/1.1/account/verify_credentials.json"),
-                               null,
-                               e.Account);
+                //var request = new OAuth1Request("GET",
+                //               new Uri("https://api.twitter.com/1.1/account/verify_credentials.json"),
+                //               null,
+                //               e.Account);
 
                 //Get response here
-                var response = await request.GetResponseAsync();
-                if (response != null)
-                {
+                //var response = await request.GetResponseAsync();
+                //if (response != null)
+                //{
                     //Get the user data here
-                   var userData = response.GetResponseText();
-                    var twitteruser = JsonConvert.DeserializeObject<TwitterUser>(userData);
+                  // var userData = response.GetResponseText();
+                    //var twitteruser = JsonConvert.DeserializeObject<TwitterUser>(userData);
                    var intent = new Intent(this, typeof(DashboardActivity));
-                    intent.PutExtra("Name", twitteruser.name);
+                 //   intent.PutExtra("Name", twitteruser.name);
                     this.StartActivity(intent);
-                }
+               // }
             }
         }
         #endregion
