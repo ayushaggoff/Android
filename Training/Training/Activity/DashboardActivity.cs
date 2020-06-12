@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Firebase.Messaging;
 using Android.Content;
 using Android.Graphics;
 using Firebase.Iid;
 using Android.Util;
-
 using Android.App;
 using Android.OS;
 using Android.Runtime;
@@ -19,10 +17,11 @@ using Firebase.Auth;
 using Xamarin.Facebook.AppLinks;
 using Xamarin.Facebook.Login;
 using Android.Gms.Common;
+using Android.Content.PM;
 
 namespace Training.Activity
 {
-    [Activity(Label = "DashboardActivity")]
+    [Activity(Label = "DashboardActivity",LaunchMode =LaunchMode.SingleTask)]
     public class DashboardActivity : AppCompatActivity
     {
         public static int ResultCode = 999;
@@ -38,6 +37,7 @@ namespace Training.Activity
         Button btnFragment,btnLogout;
         Button btnTab;
         TextView TextView_Name, TextView_Email;
+       
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -55,8 +55,6 @@ namespace Training.Activity
                 FirebaseMessaging.Instance.SubscribeToTopic("news");
                 Log.Debug(TAG, "Subscribed to remote notifications");
             };
-
-
 
 
             msgText = FindViewById<TextView>(Resource.Id.textView1);
@@ -78,6 +76,29 @@ namespace Training.Activity
             btnFragment = FindViewById<Button>(Resource.Id.button2);
             btnTab = FindViewById<Button>(Resource.Id.button3);
             TextView_Email.Text = datafromlogin;
+
+            string noticationmessage = Intent.GetStringExtra("notification");
+
+            if (noticationmessage != null&& noticationmessage !="")
+            {
+                Toast.MakeText(this, noticationmessage, ToastLength.Long).Show();
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -92,33 +113,34 @@ namespace Training.Activity
                  {
                      StartActivityForResult(typeof(AddProfileActivity), ResultCode);
                  };
-
             this.btnLogout.Click += (obj, e) =>
             {
                 LoginManager.Instance.LogOut();
-
-
                 FirebaseAuth.Instance.SignOut();
-                
-
-
-
-                Intent intent = new Intent(this,typeof(LoginActivity));
-                  
+                Intent intent = new Intent(this,typeof(LoginActivity));      
             StartActivity(intent);
              Finish();
     };
-
-
             this.btnFragment.Click += this.BtnFragment_Click;
             this.btnTab.Click += this.BtnTab_Click;
-
 
         }
         protected override void OnPause()
         {
             base.OnPause();
             //this.btnAddProfile.Click -= this.BtnAddProfile_Click;
+        }
+
+        protected override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
+
+            var context = Android.App.Application.Context;
+            var tostMessage = "///////////////ssssssssssssssssssssss///////////";
+            var durtion = ToastLength.Long;
+
+
+            Toast.MakeText(context, tostMessage, durtion).Show();
         }
 
         #region Push Notification
@@ -157,7 +179,6 @@ namespace Training.Activity
                                                   "FCM Notifications",
                                                   NotificationImportance.Default)
             {
-
                 Description = "Firebase Cloud Messages appear in this channel"
             };
 
