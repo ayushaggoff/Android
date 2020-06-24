@@ -65,6 +65,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity\Activity1.cs" />
     <Compile Include="Activity\AddProfileActivity.cs" />
     <Compile Include="Activity\AddProfileForm1Activity.cs" />
     <Compile Include="Activity\AddProfileForm2Activity.cs" />
@@ -90,8 +91,11 @@
     <Compile Include="Fragments\Fragment3.cs" />
     <Compile Include="Fragments\Fragment4.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Model\BootReceiver.cs" />
     <Compile Include="Model\FacebookResult.cs" />
     <Compile Include="Model\LogList.cs" />
+    <Compile Include="Model\MyBroadcastReceiver.cs" />
+    <Compile Include="Model\MySecondBroadcastReceiver.cs" />
     <Compile Include="Model\TwitterUser.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="MyFirebaseIIDService.cs" />
@@ -363,6 +367,22 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\TwitterLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icons_twitter_circled_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icons_twit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\RemoteRecieverLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\BroadcastTry.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

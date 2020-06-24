@@ -34,6 +34,7 @@ Button;obj\Release\90\res\layout\googleloginfirebaselayout.xml
 Button;obj\Release\90\res\layout\googlesigntrylayout.xml
 Button;obj\Release\90\res\layout\loginlayout.xml
 Button;obj\Release\90\res\layout\praclayout.xml
+Button;obj\Release\90\res\layout\twitterlayout.xml
 cache-path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Release\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;obj\Release\90\res\layout\loginlayout.xml
 color;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Release\90\lp\44\jl\res\values\values.xml
@@ -128,7 +129,9 @@ LinearLayout;obj\Release\90\res\layout\listviewlayout.xml
 LinearLayout;obj\Release\90\res\layout\loginlayout.xml
 LinearLayout;obj\Release\90\res\layout\mainlayout.xml
 LinearLayout;obj\Release\90\res\layout\praclayout.xml
+LinearLayout;obj\Release\90\res\layout\remoterecieverlayout.xml
 LinearLayout;obj\Release\90\res\layout\tablayout.xml
+LinearLayout;obj\Release\90\res\layout\twitterlayout.xml
 LinearLayout;obj\Release\90\res\layout\verifyemail.xml
 LinearLayout;obj\Release\90\res\layout\welcomescreen.xml
 ListView;obj\Release\90\res\layout\listviewlayout.xml
@@ -413,6 +416,7 @@ TextView;obj\Release\90\res\layout\listviewlayout.xml
 TextView;obj\Release\90\res\layout\loginlayout.xml
 TextView;obj\Release\90\res\layout\mainlayout.xml
 TextView;obj\Release\90\res\layout\praclayout.xml
+TextView;obj\Release\90\res\layout\remoterecieverlayout.xml
 TextView;obj\Release\90\res\layout\verifyemail.xml
 TextView;obj\Release\90\res\layout\welcomescreen.xml
 Toolbar;obj\Release\90\res\layout\listviewlayout.xml
