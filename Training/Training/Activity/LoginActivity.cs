@@ -17,10 +17,6 @@ using Android.Support.V7.App;
 
 using Android.Gms.Common;
 using Android.Util;
-
-
-
-
 using Android.Views;
 using Android.Widget;
 using Firebase;
@@ -35,11 +31,9 @@ using XamarinAuth;
 
 namespace Training.Activity
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = false)]
     public class LoginActivity : AppCompatActivity, IFacebookCallback,GraphRequest.IGraphJSONObjectCallback, IOnSuccessListener,IOnFailureListener
-
     {
-
         ImageButton btn_SigninGoogleButton;
         GoogleSignInOptions gso;
         GoogleApiClient googleApiClient;
@@ -337,7 +331,7 @@ namespace Training.Activity
             Bundle parameters = new Bundle();
             parameters.PutString("fields", "id,name,age_range,email");
             request.Parameters = parameters;
-            request.ExecuteAsync();
+            request.ExecuteAsync(); 
         }
         public void OnCompleted(JSONObject json, GraphResponse response)
         {
@@ -352,7 +346,7 @@ namespace Training.Activity
                 intent = new Intent(this, typeof(DashboardActivity));
                 intent.PutExtra("Name", Name);
                 this.StartActivity(intent);
-           
+            Finish();
 
 
         }

@@ -14,6 +14,7 @@ public class DashboardActivity
 			"n_onRequestPermissionsResult:(I[Ljava/lang/String;[I)V:GetOnRequestPermissionsResult_IarrayLjava_lang_String_arrayIHandler\n" +
 			"n_onResume:()V:GetOnResumeHandler\n" +
 			"n_onPause:()V:GetOnPauseHandler\n" +
+			"n_onNewIntent:(Landroid/content/Intent;)V:GetOnNewIntent_Landroid_content_Intent_Handler\n" +
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Training.Activity.DashboardActivity, Training", DashboardActivity.class, __md_methods);
@@ -58,6 +59,14 @@ public class DashboardActivity
 	}
 
 	private native void n_onPause ();
+
+
+	public void onNewIntent (android.content.Intent p0)
+	{
+		n_onNewIntent (p0);
+	}
+
+	private native void n_onNewIntent (android.content.Intent p0);
 
 
 	public void onActivityResult (int p0, int p1, android.content.Intent p2)

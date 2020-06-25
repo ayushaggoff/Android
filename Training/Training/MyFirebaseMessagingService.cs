@@ -80,6 +80,7 @@ namespace Training
                                           .SetSmallIcon(Resource.Drawable.icon_notification)
                                           .SetContentTitle("FCM Message")
                                           .SetContentText(messageBody)
+                                          .SetPriority(1)
                                           .SetAutoCancel(true)
                                           .SetContentIntent(pendingIntent);
 

@@ -177,7 +177,7 @@ namespace Training.Activity
 
             var channel = new NotificationChannel(CHANNEL_ID,
                                                   "FCM Notifications",
-                                                  NotificationImportance.Default)
+                                                  NotificationImportance.High)
             {
                 Description = "Firebase Cloud Messages appear in this channel"
             };

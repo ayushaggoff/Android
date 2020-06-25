@@ -45,10 +45,14 @@ namespace Training.Activity
             //    StartActivity(intent);
             String message = edittext_Fname.Text;
 
-            Intent intent1 = new Intent();
-            intent1.SetData(Android.Net.Uri.Parse(edittext_Fname.Text));
-            SetResult(Result.Ok, intent1);
-            this.Finish();
+            //Intent intent1 = new Intent();
+            //intent1.SetData(Android.Net.Uri.Parse(edittext_Fname.Text));
+            //SetResult(Result.Ok, intent1);
+            //this.Finish();
+
+
+            Finish();
+
 
           //  Intent intent = new Intent();
            // intent.PutExtra("MESSAGE", message);
