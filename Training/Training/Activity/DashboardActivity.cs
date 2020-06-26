@@ -84,21 +84,6 @@ namespace Training.Activity
                 Toast.MakeText(this, noticationmessage, ToastLength.Long).Show();
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -168,7 +153,7 @@ namespace Training.Activity
         void CreateNotificationChannel()
         {
             if (Build.VERSION.SdkInt < BuildVersionCodes.O)
-            {
+           {
                 // Notification channels are new in API 26 (and not a part of the
                 // support library). There is no need to create a notification
                 // channel on older versions of Android.

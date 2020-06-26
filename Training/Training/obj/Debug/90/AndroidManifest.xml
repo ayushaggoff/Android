@@ -28,6 +28,7 @@
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
       <intent-filter>
+        <action android:name="MY_SPECIFIC_ACTION" />
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
         <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
         <category android:name="com.companyname.training" />
@@ -45,21 +46,31 @@
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-    <activity android:label="AddProfileActivity" android:name="crc645aea788ebc5f01ab.AddProfileActivity" />
-    <activity android:label="AddProfileForm1Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm1Activity" />
-    <activity android:label="AddProfileForm2Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm2Activity" />
-    <activity android:label="ContactListActivity" android:name="crc645aea788ebc5f01ab.ContactListActivity" />
-    <activity android:label="DashboardActivity" android:name="crc645aea788ebc5f01ab.DashboardActivity" />
-    <activity android:label="FragementBtnActivity" android:name="crc645aea788ebc5f01ab.FragementBtnActivity" />
-    <activity android:label="GalleryActivity1" android:name="crc645aea788ebc5f01ab.GalleryActivity1" />
-    <activity android:label="GoogleActivity" android:name="crc645aea788ebc5f01ab.GoogleActivity" />
-    <activity android:label="GoogleSignInTryActivity" android:name="crc645aea788ebc5f01ab.GoogleSignInTryActivity" />
-    <activity android:label="@string/app_name" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginActivity">
+    <receiver android:directBootAware="true" android:enabled="true" android:exported="true" android:name="crc6499ea9e8fee2d771c.BootReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+        <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+        <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+      </intent-filter>
+    </receiver>
+    <receiver android:name="crc6499ea9e8fee2d771c.MySecondBroadcastReceiver" />
+    <activity android:label="Activity1" android:name="crc645aea788ebc5f01ab.Activity1">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="AddProfileActivity" android:name="crc645aea788ebc5f01ab.AddProfileActivity" />
+    <activity android:label="AddProfileForm1Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm1Activity" />
+    <activity android:label="AddProfileForm2Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm2Activity" />
+    <activity android:label="ContactListActivity" android:name="crc645aea788ebc5f01ab.ContactListActivity" />
+    <activity android:label="DashboardActivity" android:launchMode="singleTask" android:name="crc645aea788ebc5f01ab.DashboardActivity" />
+    <activity android:label="FragementBtnActivity" android:name="crc645aea788ebc5f01ab.FragementBtnActivity" />
+    <activity android:label="GalleryActivity1" android:name="crc645aea788ebc5f01ab.GalleryActivity1" />
+    <activity android:label="GoogleActivity" android:name="crc645aea788ebc5f01ab.GoogleActivity" />
+    <activity android:label="GoogleSignInTryActivity" android:name="crc645aea788ebc5f01ab.GoogleSignInTryActivity" />
+    <activity android:label="@string/app_name" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginActivity" />
     <activity android:label="LogListActivity" android:name="crc645aea788ebc5f01ab.LogListActivity" />
     <activity android:label="SplashScreenActivity" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="crc645aea788ebc5f01ab.SplashScreenActivity" />
     <activity android:label="TabActivity" android:name="crc645aea788ebc5f01ab.TabActivity" />
@@ -77,7 +88,7 @@
     <provider android:authorities="com.companyname.training.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="xamarin.essentials.fileProvider">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/xamarin_essentials_fileprovider_file_paths" />
     </provider>
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.companyname.training.mono.MonoRuntimeProvider.__mono_init__" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:directBootAware="true" android:authorities="com.companyname.training.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>

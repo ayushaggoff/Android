@@ -491,3 +491,6 @@ C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug
 C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\stamp\_CleanIntermediateIfNeeded.stamp
 C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\android\src\crc6499ea9e8fee2d771c\MySecondBroadcastReceiver.java
 C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\android\src\crc6499ea9e8fee2d771c\BootReceiver.java
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\res\layout\try_layout.xml
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\res\drawable\aitemring.xml
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\res\layout\layout1.xml

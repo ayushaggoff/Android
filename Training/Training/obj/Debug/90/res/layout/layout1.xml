@@ -1,0 +1,1 @@
+<LinearLayout android:layout_width="80dp" android:layout_height="80dp" android:layout_gravity="center" android:background="@drawable/aitemring" xmlns:android="http://schemas.android.com/apk/res/android"><ImageView android:src="@android:drawable/ic_dialog_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" /></LinearLayout>

@@ -25,6 +25,7 @@ Button;obj\Debug\90\res\layout\addpersonaldetailformlayout.xml
 Button;obj\Debug\90\res\layout\addprofileformlayout.xml
 Button;obj\Debug\90\res\layout\addprofileformlayout1.xml
 Button;obj\Debug\90\res\layout\addprofileformlayout2.xml
+Button;obj\Debug\90\res\layout\broadcasttry.xml
 Button;obj\Debug\90\res\layout\dashboardlayout.xml
 Button;obj\Debug\90\res\layout\facebooklayout.xml
 Button;obj\Debug\90\res\layout\fragement1layout.xml
@@ -81,10 +82,12 @@ FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Traini
 FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\47\jl\res\layout\messenger_button_send_white_large.xml
 FrameLayout;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\47\jl\res\layout\messenger_button_send_white_small.xml
 FrameLayout;obj\Debug\90\res\layout\framentbtnlayout.xml
+FrameLayout;obj\Debug\90\res\layout\layout1.xml
 ImageButton;obj\Debug\90\res\layout\listviewlayout.xml
 ImageButton;obj\Debug\90\res\layout\loginlayout.xml
 ImageView;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\46\jl\res\layout\com_facebook_tooltip_bubble.xml
 ImageView;obj\Debug\90\res\layout\gallerylayout.xml
+ImageView;obj\Debug\90\res\layout\layout1.xml
 ImageView;obj\Debug\90\res\layout\loginlayout.xml
 ImageView;obj\Debug\90\res\layout\welcomescreen.xml
 item;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
@@ -112,6 +115,7 @@ LinearLayout;obj\Debug\90\res\layout\addpersonaldetailformlayout.xml
 LinearLayout;obj\Debug\90\res\layout\addprofileformlayout.xml
 LinearLayout;obj\Debug\90\res\layout\addprofileformlayout1.xml
 LinearLayout;obj\Debug\90\res\layout\addprofileformlayout2.xml
+LinearLayout;obj\Debug\90\res\layout\broadcasttry.xml
 LinearLayout;obj\Debug\90\res\layout\contactlistlayout.xml
 LinearLayout;obj\Debug\90\res\layout\customlistviewlayout.xml
 LinearLayout;obj\Debug\90\res\layout\dashboardlayout.xml
@@ -125,16 +129,21 @@ LinearLayout;obj\Debug\90\res\layout\framentbtnlayout.xml
 LinearLayout;obj\Debug\90\res\layout\gallerylayout.xml
 LinearLayout;obj\Debug\90\res\layout\googleloginfirebaselayout.xml
 LinearLayout;obj\Debug\90\res\layout\googlesigntrylayout.xml
+LinearLayout;obj\Debug\90\res\layout\layout1.xml
 LinearLayout;obj\Debug\90\res\layout\listviewlayout.xml
 LinearLayout;obj\Debug\90\res\layout\loginlayout.xml
 LinearLayout;obj\Debug\90\res\layout\mainlayout.xml
 LinearLayout;obj\Debug\90\res\layout\praclayout.xml
+LinearLayout;obj\Debug\90\res\layout\remoterecieverlayout.xml
 LinearLayout;obj\Debug\90\res\layout\tablayout.xml
+LinearLayout;obj\Debug\90\res\layout\try_layout.xml
 LinearLayout;obj\Debug\90\res\layout\twitterlayout.xml
 LinearLayout;obj\Debug\90\res\layout\verifyemail.xml
 LinearLayout;obj\Debug\90\res\layout\welcomescreen.xml
 ListView;obj\Debug\90\res\layout\listviewlayout.xml
 menu;obj\Debug\90\res\menu\mainmenu.xml
+padding;obj\Debug\90\res\drawable\aitemring.xml
+padding;obj\Debug\90\res\layout\try_layout.xml
 path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_button_icon.xml
 path;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_favicon_blue.xml
 paths;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -275,8 +284,10 @@ shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj
 shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\47\jl\res\drawable\messenger_button_white_bg_round.xml
 shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\47\jl\res\drawable\messenger_button_white_bg_selector.xml
 shape;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\49\jl\res\drawable\com_facebook_button_send_background.xml
+shape;obj\Debug\90\res\drawable\aitemring.xml
 shape;obj\Debug\90\res\drawable\roundbutton.xml
 shape;obj\Debug\90\res\drawable\rounded_edittext.xml
+shape;obj\Debug\90\res\layout\try_layout.xml
 solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_auth_dialog_background.xml
 solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
 solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_auth_dialog_header_background.xml
@@ -287,8 +298,10 @@ solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj
 solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\47\jl\res\drawable\messenger_button_white_bg_round.xml
 solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\47\jl\res\drawable\messenger_button_white_bg_selector.xml
 solid;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\49\jl\res\drawable\com_facebook_button_send_background.xml
+solid;obj\Debug\90\res\drawable\aitemring.xml
 solid;obj\Debug\90\res\drawable\roundbutton.xml
 solid;obj\Debug\90\res\drawable\rounded_edittext.xml
+solid;obj\Debug\90\res\layout\try_layout.xml
 string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\googsvcsjson\values\goog_svcs_json.xml
 string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\40\jl\res\values\strings.xml
 string;C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\lp\44\jl\res\values\values.xml
@@ -415,6 +428,7 @@ TextView;obj\Debug\90\res\layout\listviewlayout.xml
 TextView;obj\Debug\90\res\layout\loginlayout.xml
 TextView;obj\Debug\90\res\layout\mainlayout.xml
 TextView;obj\Debug\90\res\layout\praclayout.xml
+TextView;obj\Debug\90\res\layout\remoterecieverlayout.xml
 TextView;obj\Debug\90\res\layout\verifyemail.xml
 TextView;obj\Debug\90\res\layout\welcomescreen.xml
 Toolbar;obj\Debug\90\res\layout\listviewlayout.xml
