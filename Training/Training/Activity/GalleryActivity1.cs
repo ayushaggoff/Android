@@ -152,7 +152,6 @@ namespace Training.Activity
                         {
 
                             Toast.MakeText(this, "Special permissions denied", ToastLength.Short).Show();
-
                         }
                     }
                     break;

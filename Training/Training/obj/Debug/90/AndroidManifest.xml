@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.training" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.WAKE_LOlCK" />
   <uses-permission android:name="android.permission.USE_CREDENTIALS" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -34,6 +34,13 @@
         <category android:name="com.companyname.training" />
       </intent-filter>
     </receiver>
+    <!--<activity android:name = ".MainActivity">
+         <intent-filter>
+            <action android:name = "android.intent.action.MAIN" />
+            <category android:name = "android.intent.category.LAUNCHER" />
+          </intent-filter>
+       </activity>
+       <service android:name = ".service"/>-->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="crc640c8bb63ba4d0605d.MainActivity" />
     <service android:name="crc640c8bb63ba4d0605d.MyFirebaseIIDService">
@@ -55,12 +62,7 @@
       </intent-filter>
     </receiver>
     <receiver android:name="crc6499ea9e8fee2d771c.MySecondBroadcastReceiver" />
-    <activity android:label="Activity1" android:name="crc645aea788ebc5f01ab.Activity1">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
+    <activity android:label="Activity1" android:name="crc645aea788ebc5f01ab.Activity1" />
     <activity android:label="AddProfileActivity" android:name="crc645aea788ebc5f01ab.AddProfileActivity" />
     <activity android:label="AddProfileForm1Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm1Activity" />
     <activity android:label="AddProfileForm2Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm2Activity" />
@@ -70,7 +72,12 @@
     <activity android:label="GalleryActivity1" android:name="crc645aea788ebc5f01ab.GalleryActivity1" />
     <activity android:label="GoogleActivity" android:name="crc645aea788ebc5f01ab.GoogleActivity" />
     <activity android:label="GoogleSignInTryActivity" android:name="crc645aea788ebc5f01ab.GoogleSignInTryActivity" />
-    <activity android:label="@string/app_name" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginActivity" />
+    <activity android:label="@string/app_name" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
     <activity android:label="LogListActivity" android:name="crc645aea788ebc5f01ab.LogListActivity" />
     <activity android:label="SplashScreenActivity" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="crc645aea788ebc5f01ab.SplashScreenActivity" />
     <activity android:label="TabActivity" android:name="crc645aea788ebc5f01ab.TabActivity" />

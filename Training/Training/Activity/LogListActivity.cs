@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -51,21 +50,14 @@ namespace Training.Activity
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
-        {
-           
-
-
+        {         
             Intent intent = new Intent(this, typeof(GalleryActivity1));
-               StartActivity(intent);
+            StartActivity(intent);
         }
         private void BtnContact_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(ContactListActivity));
             StartActivity(intent);
         }
-
-
-       
-
     }
 }

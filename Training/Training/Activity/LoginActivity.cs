@@ -28,10 +28,11 @@ using Xamarin.Auth;
 using Xamarin.Facebook;
 using Xamarin.Facebook.Login;
 using XamarinAuth;
+using Training.Src;
 
 namespace Training.Activity
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/LoginTheme", MainLauncher = true)]
     public class LoginActivity : AppCompatActivity, IFacebookCallback,GraphRequest.IGraphJSONObjectCallback, IOnSuccessListener,IOnFailureListener
     {
         ImageButton btn_SigninGoogleButton;
@@ -216,29 +217,32 @@ namespace Training.Activity
 
         private void BtnLogin_Click(object sender, System.EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(DashboardActivity));
 
-            if (CheckValidation(email.Text, password.Text))
-            {
-                User user = new User()
-                {
-                    Email = email.Text,
-                    Password = password.Text
-                };
 
-                intent.PutExtra("User", JsonConvert.SerializeObject(user));
+            StartService(new Intent(this, typeof(Service1)));
+         //   Intent intent = new Intent(this, typeof(DashboardActivity));
 
-                if (mCbxRemMe.Checked)
-                {
-                    ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
-                    ISharedPreferencesEditor edit = pref.Edit();
-                    edit.PutString("Email", email.Text.Trim());
-                    edit.PutString("Password", password.Text.Trim());
-                    edit.Apply();
-                }
-                this.StartActivity(intent);
-                this.Finish();
-            }
+            //if (CheckValidation(email.Text, password.Text))
+            //{
+            //    User user = new User()
+            //    {
+            //        Email = email.Text,
+            //        Password = password.Text
+            //    };
+
+            //  //  intent.PutExtra("User", JsonConvert.SerializeObject(user));
+
+            //    if (mCbxRemMe.Checked)
+            //    {
+            //        ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+            //        ISharedPreferencesEditor edit = pref.Edit();
+            //        edit.PutString("Email", email.Text.Trim());
+            //        edit.PutString("Password", password.Text.Trim());
+            //        edit.Apply();
+            //    }
+            //    //this.StartActivity(intent);
+            //   // this.Finish();
+            //}
         }
         public bool CheckValidation(string email, string password)
         {

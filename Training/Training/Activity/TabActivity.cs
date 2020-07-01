@@ -56,8 +56,6 @@ namespace Training.Activity
             if (viewPager.Adapter == null)
             {
                 setupViewPager(viewPager);
-                
-
             }
             else
             {

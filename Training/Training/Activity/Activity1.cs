@@ -14,7 +14,7 @@ using Training.Model;
 
 namespace Training.Activity
 {
-    [Activity(Label = "Activity1", MainLauncher = true)]
+    [Activity(Label = "Activity1", MainLauncher = false)]
   
     public class Activity1 : AppCompatActivity
     {
