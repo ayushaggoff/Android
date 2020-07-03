@@ -1,3 +1,6 @@
+Training.BluetoothReceiver, Training;com.companyname.training.BluetoothReceiver
+Training.BluetoothReceiver;com.companyname.training.BluetoothReceiver
+com.companyname.training.BluetoothReceiver;com.companyname.training.BluetoothReceiver
 Training.MainActivity, Training;crc640c8bb63ba4d0605d.MainActivity
 Training.MainActivity;crc640c8bb63ba4d0605d.MainActivity
 training.MainActivity;crc640c8bb63ba4d0605d.MainActivity
@@ -10,6 +13,9 @@ training.MyFirebaseIIDService;crc640c8bb63ba4d0605d.MyFirebaseIIDService
 Training.MyFirebaseMessagingService, Training;crc640c8bb63ba4d0605d.MyFirebaseMessagingService
 Training.MyFirebaseMessagingService;crc640c8bb63ba4d0605d.MyFirebaseMessagingService
 training.MyFirebaseMessagingService;crc640c8bb63ba4d0605d.MyFirebaseMessagingService
+Training.Service2, Training;crc640c8bb63ba4d0605d.Service2
+Training.Service2;crc640c8bb63ba4d0605d.Service2
+training.Service2;crc640c8bb63ba4d0605d.Service2
 Training.Src.Service1, Training;crc64d58514e9fb92953d.Service1
 Training.Src.Service1;crc64d58514e9fb92953d.Service1
 training.src.Service1;crc64d58514e9fb92953d.Service1

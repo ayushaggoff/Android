@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.training" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.BLUETOOTH" android:required="false" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
   <uses-permission android:name="android.permission.WAKE_LOlCK" />
   <uses-permission android:name="android.permission.USE_CREDENTIALS" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -21,10 +23,21 @@
   <uses-feature android:name="android.hardware.location.network" android:required="false" />
   <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:usesCleartextTraffic="true" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true">
     <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
+    <service android:name="com.companyname.training.Service2" android:exported="true" android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="com.companyname.training.Service2"></action>
+      </intent-filter>
+    </service>
     <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/app_name" />
     <provider android:authorities="com.facebook.app.FacebookContentProvider{facebook_app_id}" android:name="com.facebook.FacebookContentProvider" android:exported="true" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/icon_notification" />
+    <receiver android:name="com.companyname.training.BluetoothReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="android.bluetooth.device.action.STATE_CHANGED" />
+        <action android:name="android.intent.action.AIRPLANE_MODE" />
+      </intent-filter>
+    </receiver>
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
       <intent-filter>
@@ -34,13 +47,13 @@
         <category android:name="com.companyname.training" />
       </intent-filter>
     </receiver>
-    <!--<activity android:name = ".MainActivity">
-         <intent-filter>
-            <action android:name = "android.intent.action.MAIN" />
-            <category android:name = "android.intent.category.LAUNCHER" />
-          </intent-filter>
-       </activity>
-       <service android:name = ".service"/>-->
+    <activity android:name=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name=".service" />
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="crc640c8bb63ba4d0605d.MainActivity" />
     <service android:name="crc640c8bb63ba4d0605d.MyFirebaseIIDService">
@@ -53,6 +66,8 @@
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
+    <service android:name="crc640c8bb63ba4d0605d.Service2" />
+    <service android:name="crc64d58514e9fb92953d.Service1" />
     <receiver android:directBootAware="true" android:enabled="true" android:exported="true" android:name="crc6499ea9e8fee2d771c.BootReceiver">
       <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED" />

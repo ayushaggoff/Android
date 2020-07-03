@@ -29,6 +29,7 @@ using Xamarin.Facebook;
 using Xamarin.Facebook.Login;
 using XamarinAuth;
 using Training.Src;
+using Java.Lang;
 
 namespace Training.Activity
 {
@@ -54,14 +55,19 @@ namespace Training.Activity
         protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-          //  await TryToGetPermission();
+
+
+
+         //   Intent intent = new Intent("Service2");
+           // this.StartService(intent);
+
+            StartService(new Intent(this, typeof(Service2)));
+
+
+            //  await TryToGetPermission();
             FacebookSdk.SdkInitialize(this.ApplicationContext);
-
-
             SetContentView(Resource.Layout.LoginLayout);
-          
-
-
+         
             btn_fb = FindViewById<ImageButton>(Resource.Id.imageButton1);
             btn_twitter = FindViewById<ImageButton>(Resource.Id.imageButton2);
             btn_SigninGoogleButton = FindViewById<ImageButton>(Resource.Id.imageButton3);
@@ -203,6 +209,8 @@ namespace Training.Activity
         protected override void OnResume()    
         {
             base.OnResume();
+         //   StartService(new Intent(this, typeof(Service1)));
+
             this.btnLogin.Click += this.BtnLogin_Click;
             btn_SigninGoogleButton.Click += SigninButton_Click;
 
@@ -218,31 +226,30 @@ namespace Training.Activity
         private void BtnLogin_Click(object sender, System.EventArgs e)
         {
 
-
             StartService(new Intent(this, typeof(Service1)));
          //   Intent intent = new Intent(this, typeof(DashboardActivity));
 
-            //if (CheckValidation(email.Text, password.Text))
-            //{
-            //    User user = new User()
-            //    {
-            //        Email = email.Text,
-            //        Password = password.Text
-            //    };
+            if (CheckValidation(email.Text, password.Text))
+            {
+                User user = new User()
+                {
+                    Email = email.Text,
+                    Password = password.Text
+                };
 
-            //  //  intent.PutExtra("User", JsonConvert.SerializeObject(user));
+              //  intent.PutExtra("User", JsonConvert.SerializeObject(user));
 
-            //    if (mCbxRemMe.Checked)
-            //    {
-            //        ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
-            //        ISharedPreferencesEditor edit = pref.Edit();
-            //        edit.PutString("Email", email.Text.Trim());
-            //        edit.PutString("Password", password.Text.Trim());
-            //        edit.Apply();
-            //    }
-            //    //this.StartActivity(intent);
-            //   // this.Finish();
-            //}
+                if (mCbxRemMe.Checked)
+                {
+                    ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                    ISharedPreferencesEditor edit = pref.Edit();
+                    edit.PutString("Email", email.Text.Trim());
+                    edit.PutString("Password", password.Text.Trim());
+                    edit.Apply();
+                }
+                //this.StartActivity(intent);
+               // this.Finish();
+            }
         }
         public bool CheckValidation(string email, string password)
         {
@@ -334,8 +341,7 @@ namespace Training.Activity
             GraphRequest request = GraphRequest.NewMeRequest(AccessToken.CurrentAccessToken, this);
             Bundle parameters = new Bundle();
             parameters.PutString("fields", "id,name,age_range,email");
-            request.Parameters = parameters;
-            request.ExecuteAsync(); 
+             request.ExecuteAsync(); 
         }
         public void OnCompleted(JSONObject json, GraphResponse response)
         {

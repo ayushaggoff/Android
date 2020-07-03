@@ -3,13 +3,39 @@
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
 	<application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:usesCleartextTraffic="true" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
 		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
-		<activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/app_name" />
+   
+    <service android:name="com.companyname.training.Service2"
+            android:exported="true" android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="com.companyname.training.Service2"></action>
+      </intent-filter>
+    </service>
+
+
+
+    <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/app_name" />
 		<provider android:authorities="com.facebook.app.FacebookContentProvider{facebook_app_id}" android:name="com.facebook.FacebookContentProvider" android:exported="true" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <meta-data
         android:name="com.google.firebase.messaging.default_notification_icon"
         android:resource="@drawable/icon_notification" />
 
+    <receiver android:name="com.companyname.training.BluetoothReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="android.bluetooth.device.action.STATE_CHANGED" />
+        
+      <action android:name="android.intent.action.AIRPLANE_MODE" />
+      </intent-filter>
+
+      
+      
+  
+
+
+    </receiver>
+      
+      
+    
     <receiver
       android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
       android:exported="false" />
@@ -27,15 +53,21 @@
       </intent-filter>
     </receiver>
  
-      <!--<activity android:name = ".MainActivity">
+      <activity android:name = ".MainActivity">
          <intent-filter>
+            <action android:name = "android.intent.action.MAIN" />
+            <category android:name = "android.intent.category.LAUNCHER" />
+          </intent-filter><intent-filter>
             <action android:name = "android.intent.action.MAIN" />
             <category android:name = "android.intent.category.LAUNCHER" />
           </intent-filter>
        </activity>
-       <service android:name = ".service"/>-->
+       <service android:name = ".service"/>
     
   </application>
+  <uses-permission android:name="android.permission.BLUETOOTH" android:required="false" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
   <uses-permission android:name="android.permission.WAKE_LOlCK" />
   <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
