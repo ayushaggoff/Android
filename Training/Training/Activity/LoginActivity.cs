@@ -52,6 +52,8 @@ namespace Training.Activity
         CheckBox mCbxRemMe;
 
         Android.App.AlertDialog.Builder dialog;
+
+        BluetoothReceiver bluetoothReceiver;
         protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -105,6 +107,8 @@ namespace Training.Activity
 
             btn_twitter.Click += Btn_twitter_Click;
             //  btnLogin.Click += BtnLogin_Click;
+
+            bluetoothReceiver = new BluetoothReceiver();
         }
 
 
@@ -205,6 +209,14 @@ namespace Training.Activity
 
 
         #endregion
+
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
+            RegisterReceiver(bluetoothReceiver, intentFilter);
+        }
 
         protected override void OnResume()    
         {

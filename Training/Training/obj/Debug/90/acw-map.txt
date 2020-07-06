@@ -1,6 +1,6 @@
-Training.BluetoothReceiver, Training;com.companyname.training.BluetoothReceiver
-Training.BluetoothReceiver;com.companyname.training.BluetoothReceiver
-com.companyname.training.BluetoothReceiver;com.companyname.training.BluetoothReceiver
+Training.BluetoothReceiver, Training;crc640c8bb63ba4d0605d.BluetoothReceiver
+Training.BluetoothReceiver;crc640c8bb63ba4d0605d.BluetoothReceiver
+training.BluetoothReceiver;crc640c8bb63ba4d0605d.BluetoothReceiver
 Training.MainActivity, Training;crc640c8bb63ba4d0605d.MainActivity
 Training.MainActivity;crc640c8bb63ba4d0605d.MainActivity
 training.MainActivity;crc640c8bb63ba4d0605d.MainActivity

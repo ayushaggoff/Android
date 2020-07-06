@@ -20,22 +20,15 @@
         android:name="com.google.firebase.messaging.default_notification_icon"
         android:resource="@drawable/icon_notification" />
 
-    <receiver android:name="com.companyname.training.BluetoothReceiver" android:exported="true">
+    <!--<receiver android:name="com.companyname.training.BluetoothReceiver" android:exported="true">
       <intent-filter>
         <action android:name="android.bluetooth.device.action.STATE_CHANGED" />
         
       <action android:name="android.intent.action.AIRPLANE_MODE" />
       </intent-filter>
 
+    </receiver>-->
       
-      
-  
-
-
-    </receiver>
-      
-      
-    
     <receiver
       android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
       android:exported="false" />
@@ -53,7 +46,7 @@
       </intent-filter>
     </receiver>
  
-      <activity android:name = ".MainActivity">
+      <!--<activity android:name = ".MainActivity">
          <intent-filter>
             <action android:name = "android.intent.action.MAIN" />
             <category android:name = "android.intent.category.LAUNCHER" />
@@ -61,7 +54,7 @@
             <action android:name = "android.intent.action.MAIN" />
             <category android:name = "android.intent.category.LAUNCHER" />
           </intent-filter>
-       </activity>
+       </activity>-->
        <service android:name = ".service"/>
     
   </application>

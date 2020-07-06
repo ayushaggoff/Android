@@ -497,3 +497,4 @@ C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug
 C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\android\src\crc64d58514e9fb92953d\Service1.java
 C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\android\src\com\companyname\training\BluetoothReceiver.java
 C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\android\src\crc640c8bb63ba4d0605d\Service2.java
+C:\Users\ayusha\Documents\New folder\Android\Android\Training\Training\obj\Debug\90\android\src\crc640c8bb63ba4d0605d\BluetoothReceiver.java
