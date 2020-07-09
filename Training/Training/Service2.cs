@@ -15,7 +15,7 @@ using Android.Widget;
 
 namespace Training
 {
-    [Service]
+    [Service(Name = "com.companyname.training.Service2",Enabled =true)]
     public class Service2 : Service
     {
         private Timer _check_timer_data;

@@ -23,21 +23,36 @@
   <uses-feature android:name="android.hardware.location.network" android:required="false" />
   <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:usesCleartextTraffic="true" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true">
     <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
-    <service android:name="com.companyname.training.Service2" android:exported="true" android:label="@string/app_name">
+    <!--<service android:name="com.companyname.training.Service2"
+        android:exported="true"  android:enabled="true" >
       <intent-filter>
-        <action android:name="com.companyname.training.Service2"></action>
+        <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_CONNECTED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_DISCONNECTED" />
+
+        <action android:name="android.intent.action.AIRPLANE_MODE" />
       </intent-filter>
-    </service>
+    </service>-->
+    <service android:name=".TryService"></service>
     <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/app_name" />
     <provider android:authorities="com.facebook.app.FacebookContentProvider{facebook_app_id}" android:name="com.facebook.FacebookContentProvider" android:exported="true" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/icon_notification" />
-    <!--<receiver android:name="com.companyname.training.BluetoothReceiver" android:exported="true">
+    <!--<receiver android:name="com.companyname.training.BluetoothReceiver" android:enabled="true" android:exported="true">
       <intent-filter>
-        <action android:name="android.bluetooth.device.action.STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_CONNECTED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_DISCONNECTED" />
         
       <action android:name="android.intent.action.AIRPLANE_MODE" />
       </intent-filter>
+      <intent-filter>
+        <action android:name="android.location.PROVIDERS_CHANGED"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+      
 
     </receiver>-->
     <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
@@ -58,9 +73,9 @@
             <category android:name = "android.intent.category.LAUNCHER" />
           </intent-filter>
        </activity>-->
-    <service android:name=".service" />
+    <!--<service android:name = ".service"/>-->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
-    <receiver android:enabled="true" android:name="crc640c8bb63ba4d0605d.BluetoothReceiver" />
+    <receiver android:enabled="true" android:name="com.companyname.training.BluetoothReceiver" />
     <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="crc640c8bb63ba4d0605d.MainActivity" />
     <service android:name="crc640c8bb63ba4d0605d.MyFirebaseIIDService">
       <intent-filter>
@@ -72,7 +87,8 @@
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-    <service android:name="crc640c8bb63ba4d0605d.Service2" />
+    <service android:enabled="true" android:name="com.companyname.training.Service2" />
+    <service android:name="crc640c8bb63ba4d0605d.TryService" />
     <service android:name="crc64d58514e9fb92953d.Service1" />
     <receiver android:directBootAware="true" android:enabled="true" android:exported="true" android:name="crc6499ea9e8fee2d771c.BootReceiver">
       <intent-filter>
@@ -83,7 +99,12 @@
       </intent-filter>
     </receiver>
     <receiver android:name="crc6499ea9e8fee2d771c.MySecondBroadcastReceiver" />
-    <activity android:label="Activity1" android:name="crc645aea788ebc5f01ab.Activity1" />
+    <activity android:label="Activity1" android:name="crc645aea788ebc5f01ab.Activity1">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
     <activity android:label="AddProfileActivity" android:name="crc645aea788ebc5f01ab.AddProfileActivity" />
     <activity android:label="AddProfileForm1Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm1Activity" />
     <activity android:label="AddProfileForm2Activity" android:name="crc645aea788ebc5f01ab.AddProfileForm2Activity" />
@@ -93,17 +114,15 @@
     <activity android:label="GalleryActivity1" android:name="crc645aea788ebc5f01ab.GalleryActivity1" />
     <activity android:label="GoogleActivity" android:name="crc645aea788ebc5f01ab.GoogleActivity" />
     <activity android:label="GoogleSignInTryActivity" android:name="crc645aea788ebc5f01ab.GoogleSignInTryActivity" />
-    <activity android:label="@string/app_name" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
+    <activity android:label="@string/app_name" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginActivity" />
+    <activity android:label="LoginPracActivity" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginPracActivity" />
     <activity android:label="LogListActivity" android:name="crc645aea788ebc5f01ab.LogListActivity" />
     <activity android:label="SplashScreenActivity" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="crc645aea788ebc5f01ab.SplashScreenActivity" />
     <activity android:label="TabActivity" android:name="crc645aea788ebc5f01ab.TabActivity" />
     <activity android:label="TwitterActivity" android:name="crc645aea788ebc5f01ab.TwitterActivity" />
     <activity android:label="VerificationCodeActivity" android:name="crc645aea788ebc5f01ab.VerificationCodeActivity" />
+    <activity android:name="microsoft.identitymodel.clients.AuthenticationActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="Sign in" android:name="crc644bfa2a37363323e4.AuthenticationAgentActivity" />
     <service android:name="crc64a98abb514ffad9f1.KeepAliveService" />
     <activity android:label="Web Authenticator" android:name="crc64f98dd38067c0c88b.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="crc64f98dd38067c0c88b.WebAuthenticatorActivity" />

@@ -5,7 +5,9 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Media;
 using Android.OS;
+using Android.Provider;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
@@ -14,18 +16,19 @@ using Training.Model;
 
 namespace Training.Activity
 {
-    [Activity(Label = "Activity1", MainLauncher = false)]
+    [Activity(Label = "Activity1", MainLauncher = true)]
   
     public class Activity1 : AppCompatActivity
     {
         Button Buttonbtnsendmessage;
-        BroadcastReceiver myreceiver;
+        BroadcastReceiver broadcastReceiver;
         IntentFilter intentfilter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.layout1);
-            
+
+
             //SetContentView(Resource.Layout.BroadcastTry);
             //Buttonbtnsendmessage = (Button)FindViewById(Resource.Id.button1);
             //myreceiver = new MyBroadcastReceiver();
@@ -40,6 +43,22 @@ namespace Training.Activity
             //};
         }
 
+        protected override void OnStart()
+        {
+            base.OnStart();
+
+            IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
+
+            intentFilter.AddAction("android.bluetooth.adapter.action.STATE_CHANGED");
+            intentFilter.AddAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
+
+            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_CONNECTED");
+
+            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_DISCONNECTED");
+
+            RegisterReceiver(broadcastReceiver, intentFilter);
+            StartService(new Intent(this,typeof(TryService)));
+        }
         protected override void OnResume()
         {
             base.OnResume();

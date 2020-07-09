@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace Training
 {
-    [BroadcastReceiver( Enabled = true)]
+    [BroadcastReceiver(Name = "com.companyname.training.BluetoothReceiver", Enabled = true)]
     public class BluetoothReceiver : BroadcastReceiver
     {
         public override void OnReceive(Context context, Intent intent)

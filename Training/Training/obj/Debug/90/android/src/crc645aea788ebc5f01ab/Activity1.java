@@ -11,6 +11,7 @@ public class Activity1
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onStart:()V:GetOnStartHandler\n" +
 			"n_onResume:()V:GetOnResumeHandler\n" +
 			"n_onPause:()V:GetOnPauseHandler\n" +
 			"";
@@ -32,6 +33,14 @@ public class Activity1
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public void onStart ()
+	{
+		n_onStart ();
+	}
+
+	private native void n_onStart ();
 
 
 	public void onResume ()

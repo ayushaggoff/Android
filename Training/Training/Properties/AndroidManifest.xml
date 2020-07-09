@@ -4,13 +4,21 @@
 	<application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:usesCleartextTraffic="true" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
 		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
    
-    <service android:name="com.companyname.training.Service2"
-            android:exported="true" android:label="@string/app_name">
+    <!--<service android:name="com.companyname.training.Service2"
+        android:exported="true"  android:enabled="true" >
       <intent-filter>
-        <action android:name="com.companyname.training.Service2"></action>
-      </intent-filter>
-    </service>
+        <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_CONNECTED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_DISCONNECTED" />
 
+        <action android:name="android.intent.action.AIRPLANE_MODE" />
+      </intent-filter>
+    </service>-->
+    <service android:name=".TryService">
+   
+
+    </service>
 
 
     <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/app_name" />
@@ -20,15 +28,27 @@
         android:name="com.google.firebase.messaging.default_notification_icon"
         android:resource="@drawable/icon_notification" />
 
-    <!--<receiver android:name="com.companyname.training.BluetoothReceiver" android:exported="true">
+    
+    
+    <!--<receiver android:name="com.companyname.training.BluetoothReceiver" android:enabled="true" android:exported="true">
       <intent-filter>
-        <action android:name="android.bluetooth.device.action.STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_CONNECTED" />
+        <action android:name="android.bluetooth.adapter.action.ACL_DISCONNECTED" />
         
       <action android:name="android.intent.action.AIRPLANE_MODE" />
       </intent-filter>
+      <intent-filter>
+        <action android:name="android.location.PROVIDERS_CHANGED"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+      
 
     </receiver>-->
-      
+    
+    
+    
     <receiver
       android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
       android:exported="false" />
@@ -55,7 +75,7 @@
             <category android:name = "android.intent.category.LAUNCHER" />
           </intent-filter>
        </activity>-->
-       <service android:name = ".service"/>
+       <!--<service android:name = ".service"/>-->
     
   </application>
   <uses-permission android:name="android.permission.BLUETOOTH" android:required="false" />

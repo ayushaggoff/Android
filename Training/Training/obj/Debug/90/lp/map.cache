@@ -1,6 +1,7 @@
 Bolts.AppLinks
 Bolts.Tasks
 Google.ZXing.Core
+Microsoft.IdentityModel.Clients.ActiveDirectory
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -68,4 +69,3 @@ Xamarin.GooglePlayServices.Iid
 Xamarin.GooglePlayServices.Plus
 Xamarin.GooglePlayServices.Stats
 Xamarin.GooglePlayServices.Tasks
-Microsoft.IdentityModel.Clients.ActiveDirectory
