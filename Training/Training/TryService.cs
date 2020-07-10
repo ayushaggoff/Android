@@ -10,6 +10,7 @@ using Android.Media;
 using Android.OS;
 using Android.Provider;
 using Android.Runtime;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 
@@ -28,23 +29,62 @@ namespace Training
         [return: GeneratedEnum]
         public override StartCommandResult OnStartCommand(Intent intent, [GeneratedEnum] StartCommandFlags flags, int startId)
         {
-           
-             IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
+            bluetoothReceiver = new BluetoothReceiver();
 
-           intentFilter.AddAction("android.bluetooth.adapter.action.STATE_CHANGED" );
-            intentFilter.AddAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
+            // IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
 
-            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_CONNECTED");
+            //intentFilter.AddAction("android.bluetooth.adapter.action.STATE_CHANGED" );
+            // intentFilter.AddAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
 
-            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_DISCONNECTED");
+            // intentFilter.AddAction("android.bluetooth.adapter.action.ACL_CONNECTED");
 
-            RegisterReceiver(bluetoothReceiver, intentFilter);
+            // intentFilter.AddAction("android.bluetooth.adapter.action.ACL_DISCONNECTED");
+
+            // RegisterReceiver(bluetoothReceiver, intentFilter);
+
+
             //player = MediaPlayer.Create(this, Settings.System.DefaultAlarmAlertUri);
             //player.Looping = true;
             //player.Start();
 
 
             //return StartCommandResult.Sticky;
+
+
+
+            BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.DefaultAdapter;
+            if (mBluetoothAdapter == null)
+            {
+                Toast.MakeText(this, "Bluetooth is NOT Supported", ToastLength.Short).Show();
+
+            }
+            else if (!mBluetoothAdapter.IsEnabled)
+            {
+                Toast.MakeText(this, "Bluetooth is OFF", ToastLength.Short).Show();
+                Log.Debug("offffffffff","offffffffff");
+            }
+            else
+            {
+                Toast.MakeText(this, "Bluetooth is ON", ToastLength.Short).Show();
+                Log.Debug("onnnnnnnn", "onnnnnnnnnn");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             //BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.DefaultAdapter;
             //    // GetDefaultAdapter();
@@ -66,7 +106,7 @@ namespace Training
             //    }
 
             //    Toast.MakeText(this, "Service started by user.", ToastLength.Long).Show();
-            
+
             return StartCommandResult.Sticky;
 
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ayusha\\source\\repos\\Mob\\Mob\\Mob.csproj": {}
+    "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Mob\\Mob\\Mob.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ayusha\\source\\repos\\Mob\\Mob\\Mob.csproj": {
+    "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Mob\\Mob\\Mob.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ayusha\\source\\repos\\Mob\\Mob\\Mob.csproj",
+        "projectUniqueName": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Mob\\Mob\\Mob.csproj",
         "projectName": "Mob",
-        "projectPath": "C:\\Users\\ayusha\\source\\repos\\Mob\\Mob\\Mob.csproj",
+        "projectPath": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Mob\\Mob\\Mob.csproj",
         "packagesPath": "C:\\Users\\ayusha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ayusha\\source\\repos\\Mob\\Mob\\obj\\",
+        "outputPath": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Mob\\Mob\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

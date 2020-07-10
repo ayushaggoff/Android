@@ -14,7 +14,7 @@ using Xamarin.Essentials;
 
 namespace Training.Activity
 {
-    [Activity(Label = "LoginPracActivity", Theme = "@style/LoginTheme", MainLauncher =false)]
+    [Activity(Label = "LoginPracActivity", Theme = "@style/LoginTheme", MainLauncher =true)]
     public class LoginPracActivity : AppCompatActivity
     {
         string Password, username;

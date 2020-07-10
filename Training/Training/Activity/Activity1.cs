@@ -47,16 +47,16 @@ namespace Training.Activity
         {
             base.OnStart();
 
-            IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
+            //IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
 
-            intentFilter.AddAction("android.bluetooth.adapter.action.STATE_CHANGED");
-            intentFilter.AddAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
+            //intentFilter.AddAction("android.bluetooth.adapter.action.STATE_CHANGED");
+            //intentFilter.AddAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
 
-            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_CONNECTED");
+            //intentFilter.AddAction("android.bluetooth.adapter.action.ACL_CONNECTED");
 
-            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_DISCONNECTED");
+            //intentFilter.AddAction("android.bluetooth.adapter.action.ACL_DISCONNECTED");
 
-            RegisterReceiver(broadcastReceiver, intentFilter);
+            //RegisterReceiver(broadcastReceiver, intentFilter);
             StartService(new Intent(this,typeof(TryService)));
         }
         protected override void OnResume()

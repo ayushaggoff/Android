@@ -115,7 +115,12 @@
     <activity android:label="GoogleActivity" android:name="crc645aea788ebc5f01ab.GoogleActivity" />
     <activity android:label="GoogleSignInTryActivity" android:name="crc645aea788ebc5f01ab.GoogleSignInTryActivity" />
     <activity android:label="@string/app_name" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginActivity" />
-    <activity android:label="LoginPracActivity" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginPracActivity" />
+    <activity android:label="LoginPracActivity" android:theme="@style/LoginTheme" android:name="crc645aea788ebc5f01ab.LoginPracActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
     <activity android:label="LogListActivity" android:name="crc645aea788ebc5f01ab.LogListActivity" />
     <activity android:label="SplashScreenActivity" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="crc645aea788ebc5f01ab.SplashScreenActivity" />
     <activity android:label="TabActivity" android:name="crc645aea788ebc5f01ab.TabActivity" />

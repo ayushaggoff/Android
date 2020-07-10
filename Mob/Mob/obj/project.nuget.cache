@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "50BOri1yD4boEjzQfx5DYmyiYpUv+YOdoXjA4FCX5swWUUUbAJbN3YRr7UCXKegHxt+MRSY9a26Jhl+blOwTjg==",
+  "dgSpecHash": "ODQc8lz86RVeG/VytF7WDZArWVAMFcqhvfOc1A3tQntkd3qj7wIgS5HlacajgxfILQj8f+sh+LUynvH6MTtNDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ayusha\\source\\repos\\Mob\\Mob\\Mob.csproj",
+  "projectFilePath": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Mob\\Mob\\Mob.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

@@ -3,6 +3,6 @@
   <PropertyGroup>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>pixel_3a_xl</AndroidDesignerPreferredDevice>
-    <SelectedDevice>LENOVO K33a42</SelectedDevice>
+    <SelectedDevice>Pixel_2_Android_10_API_24</SelectedDevice>
   </PropertyGroup>
 </Project>
