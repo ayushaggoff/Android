@@ -1557,11 +1557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ayusha\\source\\repos\\AppUI\\AppUI\\AppUI.csproj",
+      "projectUniqueName": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\AppUI\\AppUI\\AppUI.csproj",
       "projectName": "AppUI",
-      "projectPath": "C:\\Users\\ayusha\\source\\repos\\AppUI\\AppUI\\AppUI.csproj",
+      "projectPath": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\AppUI\\AppUI\\AppUI.csproj",
       "packagesPath": "C:\\Users\\ayusha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ayusha\\source\\repos\\AppUI\\AppUI\\obj\\",
+      "outputPath": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\AppUI\\AppUI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
