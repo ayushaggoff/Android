@@ -16,6 +16,7 @@
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
 # To enable ProGuard in your project, edit project.properties
 # to define the proguard.config property as described in that file.
 #
@@ -48,4 +49,4 @@
 -keepnames class com.facebook.FacebookActivity
 -keepnames class com.facebook.CustomTabActivity
 
--keep class com.facebook.login.Login
+-keep class com.facebook.applinks.AppLinks

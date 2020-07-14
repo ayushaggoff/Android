@@ -31,16 +31,16 @@ namespace Training
         {
             bluetoothReceiver = new BluetoothReceiver();
 
-            // IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
+            IntentFilter intentFilter = new IntentFilter("android.bluetooth.adapter.action.STATE_CHANGED");
 
-            //intentFilter.AddAction("android.bluetooth.adapter.action.STATE_CHANGED" );
-            // intentFilter.AddAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
+            intentFilter.AddAction("android.bluetooth.adapter.action.STATE_CHANGED");
+            intentFilter.AddAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
 
-            // intentFilter.AddAction("android.bluetooth.adapter.action.ACL_CONNECTED");
+            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_CONNECTED");
 
-            // intentFilter.AddAction("android.bluetooth.adapter.action.ACL_DISCONNECTED");
+            intentFilter.AddAction("android.bluetooth.adapter.action.ACL_DISCONNECTED");
 
-            // RegisterReceiver(bluetoothReceiver, intentFilter);
+            RegisterReceiver(bluetoothReceiver, intentFilter);
 
 
             //player = MediaPlayer.Create(this, Settings.System.DefaultAlarmAlertUri);
@@ -52,22 +52,22 @@ namespace Training
 
 
 
-            BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.DefaultAdapter;
-            if (mBluetoothAdapter == null)
-            {
-                Toast.MakeText(this, "Bluetooth is NOT Supported", ToastLength.Short).Show();
+            //BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.DefaultAdapter;
+            //if (mBluetoothAdapter == null)
+            //{
+            //    Toast.MakeText(this, "Bluetooth is NOT Supported", ToastLength.Short).Show();
 
-            }
-            else if (!mBluetoothAdapter.IsEnabled)
-            {
-                Toast.MakeText(this, "Bluetooth is OFF", ToastLength.Short).Show();
-                Log.Debug("offffffffff","offffffffff");
-            }
-            else
-            {
-                Toast.MakeText(this, "Bluetooth is ON", ToastLength.Short).Show();
-                Log.Debug("onnnnnnnn", "onnnnnnnnnn");
-            }
+            //}
+            //else if (!mBluetoothAdapter.IsEnabled)
+            //{
+            //    Toast.MakeText(this, "Bluetooth is OFF", ToastLength.Short).Show();
+            //    Log.Debug("offffffffff","offffffffff");
+            //}
+            //else
+            //{
+            //    Toast.MakeText(this, "Bluetooth is ON", ToastLength.Short).Show();
+            //    Log.Debug("onnnnnnnn", "onnnnnnnnnn");
+            //}
 
 
 

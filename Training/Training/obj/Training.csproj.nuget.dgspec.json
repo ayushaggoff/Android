@@ -38,6 +38,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Microcharts": {
+              "target": "Package",
+              "version": "[0.7.1, )"
+            },
             "Microsoft.Bot.Builder": {
               "target": "Package",
               "version": "[4.9.3, )"

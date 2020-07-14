@@ -29,9 +29,6 @@ namespace Training.Activity
 
         void Try()
         {
-
-
-
             var uri = ContactsContract.CommonDataKinds.Phone.ContentUri;
             string[] projection = {
             ContactsContract.Contacts.InterfaceConsts.Id,

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JYGYgxOrbnSTnairQNBSMzxYCpEe3LCXSYf2eXirBtlaN48eqxYymFk+z1w8VAJuoFHJxr2f1seRoZ42uLqxMA==",
+  "dgSpecHash": "qRTmQTQkolnPP8gY8ovroQu1G65mFzE+TZGWLiVvggmJPZSRyjvMbV1lniNdBL/n5BP7RPeajwRxqCF85k8XPQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ayusha\\Documents\\New folder\\Android\\Android\\Training\\Training\\Training.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ayusha\\.nuget\\packages\\bolts\\1.4.0.1\\bolts.1.4.0.1.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\microcharts\\0.7.1\\microcharts.0.7.1.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\microsoft.bot.builder\\4.9.3\\microsoft.bot.builder.4.9.3.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\microsoft.bot.connector\\4.9.3\\microsoft.bot.connector.4.9.3.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\microsoft.bot.schema\\4.9.3\\microsoft.bot.schema.4.9.3.nupkg.sha512",
@@ -26,6 +27,8 @@
     "C:\\Users\\ayusha\\.nuget\\packages\\microsoft.net.http.headers\\2.1.0\\microsoft.net.http.headers.2.1.0.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.21\\microsoft.rest.clientruntime.2.3.21.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\skiasharp\\1.59.1\\skiasharp.1.59.1.nupkg.sha512",
+    "C:\\Users\\ayusha\\.nuget\\packages\\skiasharp.views\\1.59.1.1\\skiasharp.views.1.59.1.1.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.6.0\\system.identitymodel.tokens.jwt.5.6.0.nupkg.sha512",
     "C:\\Users\\ayusha\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
